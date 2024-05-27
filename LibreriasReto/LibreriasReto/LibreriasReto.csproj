@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibreriasReto.BLL\LibreriasReto.BLL.csproj" />
+    <ProjectReference Include="..\LibreriasReto.DTO\LibreriasReto.DTO.csproj" />
+    <ProjectReference Include="..\LibreriasReto.IOC\LibreriasReto.IOC.csproj" />
+  </ItemGroup>
+
+</Project>

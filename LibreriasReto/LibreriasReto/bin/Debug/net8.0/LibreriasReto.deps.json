@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LibreriasReto/1.0.0": {
+        "runtime": {
+          "LibreriasReto.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LibreriasReto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

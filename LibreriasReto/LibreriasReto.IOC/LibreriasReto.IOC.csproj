@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibreriasReto.BLL\LibreriasReto.BLL.csproj" />
+    <ProjectReference Include="..\LibreriasReto.DAL\LibreriasReto.DAL.csproj" />
+    <ProjectReference Include="..\LibreriasReto.Utilidades\LibreriasReto.Utilidades.csproj" />
+  </ItemGroup>
+
+</Project>
