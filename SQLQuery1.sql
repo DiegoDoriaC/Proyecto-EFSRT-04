@@ -1,7 +1,11 @@
+--CREACION Y USO DE LA BD--
 create database LibreriasReto;
 use LibreriasReto;
+
+--FORMATO DE FECHA--
 set dateformat dmy
 
+--CREACION DE TABLAS
 create table area
 (
 	idArea int primary key not null identity(1,1),
@@ -35,10 +39,12 @@ create table cliente
 );
 go
 
+
+
 create table empleado
 (
 	idEmpleado int primary key not null identity(2000,1),
-	idArea int references area,
+	idArea int references area(idArea),
 	dni varchar(9) not null,
 	nombre varchar(30) not null,
 	apellido varchar(30) not null,
@@ -55,6 +61,8 @@ create table acceso
 (
 	idAcceso int primary key not null identity (1,1),
 	idEmpleado int not null references empleado, --DNI
+	--SE AÑADIO LA COLUMNA DNI A LA TABLA ACCESO--
+	dniEmpleado varchar(9) not null,
 	clave varchar(150) not null --PASSWORD
 );
 go
@@ -104,6 +112,7 @@ create table venta
 );
 go
 
+--INGRESO DE REGISTROS POR DEFAULT--
 insert into area values
 	('Limpieza', 1200),
 	('Vendedor', 2200),
@@ -146,9 +155,14 @@ insert into libro values
 	( 4, 'El silencio de la ciudad blanca', 'Eva Garcia Saenz', 'Editorial Planeta', 89, 2016, 0, 1)
 go
 
+insert into acceso values
+	(2000, '12345678', '32207a220eed3e0e041190bb17e623c6c38f8ab4d65986084d5bd473a7a8b0d2')
+
+--SELECT A LAS TABLAS
 select * from area;
 select * from genero;
 select * from metodoPago;
 select * from cliente;
 select * from empleado;
 select * from libro;
+select * from acceso;

@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LibreriasReto.DTO\LibreriasReto.DTO.csproj" />
     <ProjectReference Include="..\LibreriasReto.Models\LibreriasReto.Models.csproj" />
+    <ProjectReference Include="..\LibreriasReto.Utilidades\LibreriasReto.Utilidades.csproj" />
   </ItemGroup>
 
 </Project>

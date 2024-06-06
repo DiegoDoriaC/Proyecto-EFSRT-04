@@ -10,6 +10,7 @@ namespace LibreriasReto.DTO
     {
         public int IdAcceso { get; set; }
         public int IdEmpleado { get; set; }
+        public string? dniEmpleado { get; set; }
         public string? EmpleadoNombre { get; set; }
         public string Clave { get; set; } = null!;
     }

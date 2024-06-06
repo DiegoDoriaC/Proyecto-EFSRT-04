@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bnT2MoQLdYs1Uw70GLTeGpNyJ7MOF6/fdJCrQutb6zFz7HGyXsLow1WlT6DiuDNdSHqG+s/Zu23UTPC69neA+g==",
+  "dgSpecHash": "O04mnaJ1RGo9mD2j67pAlZO60J2MODcvdKExSB3gRynhz2u3j/zqBfcskLgNBuVDCQvr6JdlSwtOQWK64EFVhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DAL\\LibreriasReto.DAL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Diego D\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Diego D\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Diego D\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\Diego D\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

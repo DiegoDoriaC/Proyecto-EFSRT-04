@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<LibreriasReto.DTO.EmpleadoDTO>;
+
+<h2 class="mb-3">Mantenimiento Empleado</h2>
+<a asp-controller="empleado" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Area</th>
+            <th>Dni</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+            <th>FechaIngreso</th>
+            <th>Email</th>
+            <th>Direccion</th>
+            <th style="text-align: center;" colspan="1">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nombreArea</td>
+                <td>@item.Dni</td>
+                <td>@item.Nombre</td>
+                <td>@item.Apellido</td>
+                <td>@item.Telefono</td>
+                <td>@item.FechaIngreso</td>
+                <td>@item.Email</td>
+                <td>@item.Direccion</td>
+                <td><a asp-controller="Empleado" asp-action="Update" asp-route-id="@item.IdEmpleado">Editar</a></td>
+                <td><a asp-controller="Empleado" asp-action="Delete" asp-route-id="@item.IdEmpleado">Eliminar</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+

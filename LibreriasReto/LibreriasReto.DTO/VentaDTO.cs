@@ -13,8 +13,8 @@ namespace LibreriasReto.DTO
         public int Idlibro { get; set; }
         public string? nombreLibro { get; set; }
         public int Cantidad { get; set; }
-        public string? Precio { get; set; }
-        public string? Total { get; set; }
+        public decimal? Precio { get; set; }
+        public decimal? Total { get; set; }
         public virtual ComprobanteDTO? IdComprobanteNavigation { get; set; }
     }
 }

@@ -15,8 +15,8 @@ namespace LibreriasReto.DTO
         public string? nombreEmpleado { get; set; }
         public int IdMetodoPago { get; set; }
         public string? nombreMetodoPago { get; set; }
-        public string? Total { get; set; }
+        public decimal? Total { get; set; }
         public string? FechaVenta { get; set; }
-        public virtual ICollection<VentaDTO> Venta { get; set; } = new List<Venta>();
+        public virtual ICollection<VentaDTO> Venta { get; set; } = new List<VentaDTO>();
     }
 }

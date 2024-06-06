@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model LibreriasReto.DTO.LibroDTO;
+
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2>Nuevo Libro</h2>
+        <form asp-controller="Libro" asp-action="Create" method="post">
+            <div class="mb-3">
+                <label>Genero</label>
+                <input class="form-control" asp-for="IdGenero" type="number" />
+            </div>
+            <div class="mb-3">
+                <label>Libro</label>
+                <input class="form-control" asp-for="Nombre" type="number" />
+            </div>
+            <div class="mb-3">
+                <label>Autor</label>
+                <input class="form-control" asp-for="Autor" type="text" />
+            </div>
+            <div class="mb-3">
+                <label>Editorial</label>
+                <input class="form-control" asp-for="Editorial" type="text" />
+            </div>
+            <div class="mb-3">
+                <label>Precio</label>
+                <input class="form-control" asp-for="Precio" type="text" />
+            </div>
+            <div class="mb-3">
+                <label>Año Publicacion</label>
+                <input class="form-control" asp-for="AnioPublicacion" type="text" />
+            </div>
+            <div class="mb-3">
+                <label>Stock</label>
+                <input class="form-control" asp-for="Stock" type="text" />
+            </div>
+            <div class="mb-4">
+                <label>Estado</label>
+                <input class="form-control" asp-for="EsActivo" type="text" value="1" readonly hidden />
+                <input class="form-control" value="Activo" readonly />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success" type="submit">Registrar</button>
+                <a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<h1>@ViewBag.MENSAJE</h1>

@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\AccesoController1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LibreriasReto.BLL\LibreriasReto.BLL.csproj" />
     <ProjectReference Include="..\LibreriasReto.DTO\LibreriasReto.DTO.csproj" />
     <ProjectReference Include="..\LibreriasReto.IOC\LibreriasReto.IOC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
   </ItemGroup>
 
 </Project>

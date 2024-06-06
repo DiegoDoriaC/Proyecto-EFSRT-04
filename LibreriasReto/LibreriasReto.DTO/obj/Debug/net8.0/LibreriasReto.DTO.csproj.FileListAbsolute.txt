@@ -1,0 +1,12 @@
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\LibreriasReto.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\LibreriasReto.DTO.AssemblyInfoInputs.cache
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\LibreriasReto.DTO.AssemblyInfo.cs
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\LibreriasReto.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\LibreriasReto.DTO.sourcelink.json
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\bin\Debug\net8.0\LibreriasReto.DTO.deps.json
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\bin\Debug\net8.0\LibreriasReto.DTO.dll
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\bin\Debug\net8.0\LibreriasReto.DTO.pdb
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\LibreriasReto.DTO.dll
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\refint\LibreriasReto.DTO.dll
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\LibreriasReto.DTO.pdb
+C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.DTO\obj\Debug\net8.0\ref\LibreriasReto.DTO.dll

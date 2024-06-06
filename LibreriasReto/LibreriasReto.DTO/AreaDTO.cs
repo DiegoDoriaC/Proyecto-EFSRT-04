@@ -11,5 +11,6 @@ namespace LibreriasReto.DTO
         public int IdArea { get; set; }
         public string Cargo { get; set; } = null!;
         public decimal Sueldo { get; set; }
+        public virtual ICollection<EmpleadoDTO> Empleados { get; set; } = new List<EmpleadoDTO>();
     }
 }

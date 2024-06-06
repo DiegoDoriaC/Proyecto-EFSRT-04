@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model LibreriasReto.DTO.ClienteDTO;
+
+<div class="row">
+    <div class="col-sm-8 offset-ms-2">
+        <h2>Editar Cliente</h2>
+        <form asp-controller="Cliente" asp-action="Update" method="post">
+            <div class="mb-3">
+                <label>ID</label>
+                <input class="form-control" asp-for="IdCliente" type="number" value="@Model.IdCliente" readonly />
+            </div>
+            <div class="mb-3">
+                <label>DNI</label>
+                <input class="form-control" asp-for="Dni" type="number" value="@Model.Dni" />
+            </div>
+            <div class="mb-3">
+                <label>Nombre</label>
+                <input class="form-control" asp-for="Nombre" type="text" value="@Model.Nombre" />
+            </div>
+            <div class="mb-3">
+                <label>Apellido Completo</label>
+                <input class="form-control" asp-for="Apellido" type="text" value="@Model.Apellido" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success" type="submit">Actualizar</button>
+                <a asp-controller="Cliente" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>

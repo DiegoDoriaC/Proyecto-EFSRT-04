@@ -1,0 +1,37 @@
+﻿@model List<LibreriasReto.DTO.LibroDTO>;
+
+<h2 class="mb-3">Mantenimiento Libros</h2>
+<a asp-controller="Libro" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Genero</th>
+            <th>Libro</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+            <th>Precio</th>
+            <th>Publicación</th>
+            <th>Stock</th>
+            <th>Estado</th>
+            <th style="text-align: center;" colspan="1">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nombreGenero</td>
+                <td>@item.Nombre</td>
+                <td>@item.Autor</td>
+                <td>@item.Editorial</td>
+                <td>S/. @item.Precio.00</td>
+                <td>@item.AnioPublicacion</td>
+                <td>@item.Stock</td>
+                <td>@(item.EsActivo == true ? "Activo" : "Inactivo")</td>
+                <td><a asp-controller="Libro" asp-action="Update" asp-route-id="@item.IdLibro">Editar</a></td>
+                <td><a asp-controller="Libro" asp-action="Delete" asp-route-id="@item.IdLibro">Eliminar</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿using System.Security.Cryptography;
+using System.Text;
+using Microsoft.Extensions.Configuration;
+
+namespace LibreriasReto.DAL.Service
+{
+    public class Encriptacion
+    {
+        private readonly IConfiguration _configuration;
+
+        public Encriptacion(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        public static string GetSHA256(string str)
+        {
+            SHA256 sha256 = SHA256Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
+        }
+
+    }
+}
