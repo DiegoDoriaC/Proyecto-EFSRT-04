@@ -33,10 +33,10 @@
             </div>
             <div class="mb-3">
                 <label>Fecha Ingreso</label>
-                <input class="form-control" asp-for="FechaIngreso" type="date" value="@Model.FechaIngreso" readonly />
+                <input class="form-control" asp-for="FechaIngreso" type="text" value="@Model.FechaIngreso.ToString()" readonly />
             </div>
             <div class="mb-3">
-                <button class="btn btn-danger" type="submit">Eliminar</button>
+                <button class="btn btn-danger" type="submit">Desactivar</button>
                 <a asp-controller="Empleado" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
             </div>
         </form>

@@ -30,6 +30,18 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Area/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Area/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYVxMaXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Area/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Cliente/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Cliente/Lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxMaXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Cliente/ListaDesactivados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxMaXN0YURlc2FjdGl2YWRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Cliente/Update.cshtml]
@@ -58,8 +74,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cTGlzdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Empleado/ListaDesactivados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cTGlzdGFEZXNhY3RpdmFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Empleado/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Genero/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Genero/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXExpc3RhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Genero/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJvXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Home/Index.cshtml]
@@ -78,12 +110,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Libro/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Libro/Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cRmlsdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Libro/Lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cTGlzdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Libro/ListaDesactivados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cTGlzdGFEZXNhY3RpdmFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Libro/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicm9cVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Recepcion/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Recepcion/Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uXEZpbHRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Recepcion/Lista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uXExpc3RhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Diego D/Desktop/Experiencias Formativas/LibreriasReto/LibreriasReto/Views/Shared/Error.cshtml]

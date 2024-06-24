@@ -9,19 +9,22 @@
     <div class="col-sm-8 offset-sm-2">
         <h2>Nuevo Cliente</h2>
         <form asp-controller="Cliente" asp-action="Create" method="post">
-            <div class="mb-3">
-                <label>DNI</label>
-                <input class="form-control" asp-for="Dni" type="number" />
+            <div class="mb-3 form-group">
+                <label asp-for="Dni">DNI</label>
+                <input asp-for="Dni" class="form-control" />
+                <span asp-validation-for="Dni" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <label>Nombre</label>
-                <input class="form-control" asp-for="Nombre" type="text" />
+            <div class="mb-3 form-group">
+                <label asp-for="Nombre">Nombre</label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <label>Apellido Completo</label>
-                <input class="form-control" asp-for="Apellido" type="text" />
+            <div class="mb-3 form-group">
+                <label asp-for="Apellido">Apellido Completo</label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 form-group">
                 <label>Estado</label>
                 <input class="form-control" asp-for="EsActivo" type="text" value="1" readonly hidden />
                 <input class="form-control" value="Activo" readonly />
@@ -35,3 +38,9 @@
 </div>
 
 <h1>@ViewBag.MENSAJE</h1>
+
+<script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+</script>

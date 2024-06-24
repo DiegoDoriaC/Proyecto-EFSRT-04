@@ -1,0 +1,28 @@
+﻿@model IEnumerable<LibreriasReto.DTO.AreaDTO>
+
+<h2 class="mb-3">Mantenimiento Areas Laborales</h2>
+<div style="display: flex">
+    <a asp-controller="Area" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID Area</th>
+            <th>Cargo</th>
+            <th>Sueldo</th>
+            <th style="text-align: center" colspan="1">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdArea</td>
+                <td>@item.Cargo</td>
+                <td>S/. @item.Sueldo</td>
+                <td style="text-align:center"><a style="text-decoration:none" asp-controller="Area" asp-action="Update" asp-route-id="@item.IdArea">Editar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

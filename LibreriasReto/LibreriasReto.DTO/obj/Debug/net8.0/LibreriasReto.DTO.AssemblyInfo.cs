@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibreriasReto.DTO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a3bd930f1d66464f33ffec23afdb4c84fa2d90e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11b1a97dbae6c4a05b3a42ee114d2fb2a46c3397")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibreriasReto.DTO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibreriasReto.DTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

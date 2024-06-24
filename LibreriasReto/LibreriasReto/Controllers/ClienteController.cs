@@ -1,4 +1,6 @@
-﻿using LibreriasReto.BLL.Servicios.Contrato;
+﻿using ClosedXML.Excel;
+using System.Data;
+using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,10 +23,17 @@ namespace LibreriasReto.Controllers
             return View(listado);
         }
 
-        [HttpPost]
-        public IActionResult Search(int id)
+        [HttpGet]
+        public async Task<IActionResult> ListaDesactivados()
         {
-            return View(_servicio.Buscar(id));
+            return View(await _servicio.ListarDesactivados());
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Active(int id)
+        {
+            await _servicio.Activar(id);
+            return RedirectToAction(nameof(ListaDesactivados));
         }
 
 
@@ -72,6 +81,39 @@ namespace LibreriasReto.Controllers
             return RedirectToAction(nameof(Lista));
         }
 
+        [HttpGet]
+        public async Task<FileResult> ExportarExcel()
+        {
+            var listado = await _servicio.ListarTodos();
+            var nombreExcel = string.Concat("Reporte Clientes : ", DateTime.Now.ToString("dd/MM/yyyy"), ".xlsx");
+            return GenerarExcel(nombreExcel, listado);
+        }
+
+        public FileResult GenerarExcel(string nombreArchivo, IEnumerable<ClienteDTO> valores)
+        {
+            DataTable dt = new DataTable("personas");
+            dt.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn("Id"),
+                new DataColumn("Dni"),
+                new DataColumn("Nombre"),
+                new DataColumn("Apellido"),
+                new DataColumn("Estado")
+            });
+            foreach (var item in valores)
+            {
+                dt.Rows.Add(item.IdCliente, item.Dni, item.Nombre, item.Apellido, item.EsActivo == true ? "Activo" : "Inactivo");
+            }
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(dt);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", nombreArchivo);
+                }
+            }
+        }
 
     }
 }

@@ -13,6 +13,7 @@ public partial class Libro
     public int Precio { get; set; }
     public int AnioPublicacion { get; set; }
     public int? Stock { get; set; }
+    public string? urlImagen { get; set; }
     public bool? EsActivo { get; set; }
     public virtual Genero? IdGeneroNavigation { get; set; }
     public virtual ICollection<Recepcion> Recepcions { get; set; } = new List<Recepcion>();

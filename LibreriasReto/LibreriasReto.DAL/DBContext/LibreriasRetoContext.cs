@@ -215,6 +215,10 @@ public partial class LibreriasRetoContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("nombre");
+            entity.Property(e => e.urlImagen)
+                .HasMaxLength(550)
+                .IsUnicode(false)
+                .HasColumnName("urlImagen");
             entity.Property(e => e.Precio).HasColumnName("precio");
             entity.Property(e => e.Stock)
                 .HasDefaultValue(0)

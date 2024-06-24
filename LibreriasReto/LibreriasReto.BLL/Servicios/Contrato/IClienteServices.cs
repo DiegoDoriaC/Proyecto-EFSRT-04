@@ -11,7 +11,10 @@ namespace LibreriasReto.BLL.Servicios.Contrato
     public interface IClienteServices
     {
         Task<List<ClienteDTO>> Listar();
+        Task<List<ClienteDTO>> ListarDesactivados();
+        Task<List<ClienteDTO>> ListarTodos();
         Task<ClienteDTO> Buscar(int id);
+        Task<bool> Activar(int id);
         Task<bool> Registrar(ClienteDTO cilente);
         Task<bool> Actualizar(ClienteDTO cliente);
         Task<bool> Eliminar(int id);

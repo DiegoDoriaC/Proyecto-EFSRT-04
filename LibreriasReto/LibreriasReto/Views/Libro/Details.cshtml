@@ -1,0 +1,53 @@
+﻿@model LibreriasReto.DTO.LibroDTO;
+<style>
+    h1{
+        text-align: center;
+        margin-top: 20px
+    }
+</style>
+
+<h1>@Model.Nombre</h1>
+<div class="" style="display:flex; flex-wrap:nowrap; width:100%; gap:60px; align-items:center">
+    <div class="col-sm-8 offset-ms-2" style="height:100%">
+        <form asp-controller="Empleado" asp-action="Update" method="post">
+            <div class="mb-3">
+                <label>Genero</label>
+                <input class="form-control" asp-for="IdLibro" type="text" value="@Model.nombreGenero" readonly/>
+            </div>
+            <div class="mb-3">
+                <label>Libro</label>
+                <input class="form-control" asp-for="IdLibro" type="text" value="@Model.Nombre" readonly />
+            </div>
+            <div class="mb-3">
+                <label>Autor</label>
+                <input class="form-control" asp-for="Autor" type="text" value="@Model.Autor" readonly />
+            </div>
+            <div class="mb-3">
+                <label>Editorial</label>
+                <input class="form-control" asp-for="Editorial" type="text" value="@Model.Editorial" readonly />
+            </div>
+            <div class="mb-3">
+                <label>Precio (soles)</label>
+                <input class="form-control" asp-for="Precio" type="number" value="@Model.Precio" readonly />
+            </div>
+            <div class="mb-3">
+                <label>Publicacion</label>
+                <input class="form-control" asp-for="AnioPublicacion" type="text" value="@Model.AnioPublicacion" readonly />
+            </div>
+            <div class="mb-3">
+                <label>Stock</label>
+                <input class="form-control" asp-for="Stock" type="text" value="@Model.Stock" readonly />
+            </div>
+            <div class="mb-3">
+                <label>Estado</label>
+                <input class="form-control" asp-for="EsActivo" type="text" value="@(Model.EsActivo == true ? "Activo" : "Inactivo")" readonly />
+            </div>
+        </form>
+    </div>
+    <div style="display:flex; height:100%">
+        <img style="width:300px;height:440px; margin:auto" src="@Model.urlImagen" />
+    </div>
+</div>
+<div class="mb-3">
+    <a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue; color:blue" class="btn">Volver</a>
+</div>

@@ -42,7 +42,7 @@
         }
     </div>
     <div style="width:400px; height:100px; padding:15px; height:170px; align-items:center">
-        <h3 class="mb-3" style="text-align:center">Sesion se prueba</h3>
+        <h3 class="mb-3" style="text-align:center">Sesion de prueba</h3>
         <div style="display:flex; justify-content:center; width:100%" class="mb-3">
             <input id="copyInputDni" value="12345678"></input>
             <button id="copyButtonDni" class="boton">Copiar</button>
@@ -56,9 +56,11 @@
 
 
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         const contra = document.getElementById('password');
         contra.value = '';
+        
     });
 
     let dniCopiado
@@ -95,8 +97,6 @@
     pegarbotonpass.addEventListener("click", (event) => {
         event.preventDefault();
         pegarinputpass.value = passwordCopiado
-    })
-
-    
+    });
 
 </script>

@@ -16,40 +16,42 @@
             </div>
             <div class="mb-3">
                 <label>Area</label>
-                <select asp-for="IdArea" class="form-select">
-                    <option value="1">Limpieza</option>
-                    <option value="2">Vendedor</option>
-                    <option value="3">Almacenero</option>
-                    <option value="4">Seguridad</option>
-                </select>
+                <select asp-for="IdArea" asp-items="@ViewBag.GENEROS" class="form-select"></select>
             </div>
             <div class="mb-3">
                 <label>DNI</label>
                 <input class="form-control" asp-for="Dni" type="number" value="@Model.Dni" />
+                <span asp-validation-for="Dni" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Nombre</label>
                 <input class="form-control" asp-for="Nombre" type="text" value="@Model.Nombre" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Apellido Completo</label>
                 <input class="form-control" asp-for="Apellido" type="text" value="@Model.Apellido" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Telefono</label>
                 <input class="form-control" asp-for="Telefono" type="number" value="@Model.Telefono" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Fecha Ingreso</label>
                 <input onloadeddata="@Model.FechaIngreso" class="form-control" asp-for="FechaIngreso" type="date" value="@Model.FechaIngreso.ToString()" />
+                <span asp-validation-for="FechaIngreso" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Email</label>
                 <input class="form-control" asp-for="Email" type="email" value="@Model.Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Direccion</label>
                 <input class="form-control" asp-for="Direccion" type="text" value="@Model.Direccion" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <button class="btn btn-success" type="submit">Actualizar</button>

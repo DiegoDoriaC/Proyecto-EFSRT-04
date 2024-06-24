@@ -28,11 +28,11 @@ namespace LibreriasReto.BLL.Servicios
             {
                 if (empleado != null)
                 {
-                    var clienteMapeado = _mapper.Map<Empleado>(empleado);
-                    var clienteEncontrado = await _dbcontext.Set<Empleado>().FindAsync(clienteMapeado.IdEmpleado);
-                    await _dbcontext.SaveChangesAsync();
+                    var clienteEncontrado = await _dbcontext.Set<Empleado>().AsNoTracking().FirstOrDefaultAsync(e => e.IdEmpleado == empleado.IdEmpleado);
                     if (clienteEncontrado == null) { throw new TaskCanceledException("Empleado no encontrado"); }
-                    _dbcontext.Update(clienteEncontrado);
+                    var clienteMapeado = _mapper.Map<Empleado>(empleado);
+                    clienteMapeado.EsActivo = clienteEncontrado.EsActivo;
+                    _dbcontext.Update(clienteMapeado);
                     await _dbcontext.SaveChangesAsync();
                     resultado = true;
                 }
@@ -92,6 +92,56 @@ namespace LibreriasReto.BLL.Servicios
                 throw;
             }
             return listaClisentes;
+        }
+
+        public async Task<List<EmpleadoDTO>> ListarTodo()
+        {
+            List<EmpleadoDTO> listaClisentes;
+            try
+            {
+                var clientes = await _dbcontext.Set<Empleado>().Include(empleado => empleado.IdAreaNavigation).ToListAsync();
+                listaClisentes = _mapper.Map<List<EmpleadoDTO>>(clientes);
+            }
+            catch
+            {
+                throw;
+            }
+            return listaClisentes;
+        }
+
+        public async Task<List<EmpleadoDTO>> ListarDesactivados()
+        {
+            List<EmpleadoDTO> listaClisentes;
+            try
+            {
+                var clientes = await _dbcontext.Set<Empleado>().Where(e => e.EsActivo == false).Include(empleado => empleado.IdAreaNavigation).ToListAsync();
+                listaClisentes = _mapper.Map<List<EmpleadoDTO>>(clientes);
+            }
+            catch
+            {
+                throw;
+            }
+            return listaClisentes;
+        }
+
+        public async Task<bool> Activar(int id)
+        {
+            bool resultado = false;
+            try
+            {
+                Empleado? empleado = await _dbcontext.Set<Empleado>().FindAsync(id);
+                if (empleado == null) throw new TaskCanceledException("Cliente no encontrado");
+                empleado.EsActivo = true;
+                _dbcontext.Set<Empleado>().Update(empleado);
+                _dbcontext.SaveChanges();
+                resultado = true;
+
+            }
+            catch
+            {
+                throw;
+            }
+            return resultado;
         }
 
         public async Task<bool> Registrar(EmpleadoDTO empleado)

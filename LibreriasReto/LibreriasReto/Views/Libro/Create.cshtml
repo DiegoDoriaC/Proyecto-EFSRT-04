@@ -10,33 +10,40 @@
         <h2>Nuevo Libro</h2>
         <form asp-controller="Libro" asp-action="Create" method="post">
             <div class="mb-3">
-                <label>Genero</label>
-                <input class="form-control" asp-for="IdGenero" type="number" />
+                <label asp-for="IdGenero">Genero</label>
+                <select asp-for="IdGenero" asp-items="@ViewBag.GENEROS" class="form-select"></select>
             </div>
             <div class="mb-3">
                 <label>Libro</label>
-                <input class="form-control" asp-for="Nombre" type="number" />
+                <input class="form-control" asp-for="Nombre" type="text" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Autor</label>
                 <input class="form-control" asp-for="Autor" type="text" />
+                <span asp-validation-for="Autor" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Editorial</label>
                 <input class="form-control" asp-for="Editorial" type="text" />
+                <span asp-validation-for="Editorial" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label>Precio</label>
+                <label>Precio (soles)</label>
                 <input class="form-control" asp-for="Precio" type="text" />
+                <span asp-validation-for="Precio" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Año Publicacion</label>
                 <input class="form-control" asp-for="AnioPublicacion" type="text" />
+                <span asp-validation-for="AnioPublicacion" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <label>Stock</label>
-                <input class="form-control" asp-for="Stock" type="text" />
+                <label>Imagen</label>
+                <input class="form-control" asp-for="urlImagen" type="text" placeholder="url" value="@Model.urlImagen" />
+                <span asp-validation-for="urlImagen" class="text-danger"></span>
             </div>
+                <input class="form-control" asp-for="Stock" type="hidden" value="0"/>
             <div class="mb-4">
                 <label>Estado</label>
                 <input class="form-control" asp-for="EsActivo" type="text" value="1" readonly hidden />

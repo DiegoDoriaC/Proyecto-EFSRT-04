@@ -35,12 +35,14 @@ namespace LibreriasReto.IOC
             //Crud Servicios
             services.AddScoped<IAccesoService, AccesoService>();
             services.AddScoped<IClienteServices, ClienteService>();
-            //services.AddScoped<IComprobanteServices, ComprobanteService>();
             services.AddScoped<IEmpleadoService, EmpleadoService>();
             services.AddScoped<ILibroService, LibroService>();
             services.AddScoped<IRecepcionService, RecepcionService>();
+            services.AddScoped<IGeneroService, GeneroService>();
+            services.AddScoped<IAreaService, AreaService>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
-                //services.AddScoped<IVentaService, VentaService>();
+            //services.AddScoped<IComprobanteServices, ComprobanteService>();
+            //services.AddScoped<IVentaService, VentaService>();
 
         }
 

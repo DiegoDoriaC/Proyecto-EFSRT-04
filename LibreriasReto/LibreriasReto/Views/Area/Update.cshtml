@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model LibreriasReto.DTO.AreaDTO;
+
+<div class="row">
+    <div class="col-sm-8 offset-ms-2">
+        <h2>Editar Area Laboral</h2>
+        <form asp-controller="Area" asp-action="Update" method="post">
+            <div class="mb-3">
+                <label>ID</label>
+                <input class="form-control" asp-for="IdArea" value="@Model.IdArea" readonly />
+            </div>
+            <div class="mb-3">
+                <label>Cargo</label>
+                <input class="form-control" asp-for="Cargo" value="@Model.Cargo" />
+                <span asp-validation-for="Cargo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label>Sueldo</label>
+                <input class="form-control" asp-for="Sueldo" value="@Model.Sueldo"/>
+                <span asp-validation-for="Sueldo" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success" type="submit">Actualizar</button>
+                <a asp-controller="Area" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>

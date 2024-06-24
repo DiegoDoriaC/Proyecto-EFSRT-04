@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<LibreriasReto.DTO.ClienteDTO>;
+
+<h2 class="mb-3">Clientes Inactivos</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Dni</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Estado</th>
+            <th style="text-align: center;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdCliente</td>
+                <td>@item.Dni</td>
+                <td>@item.Nombre</td>
+                <td>@item.Apellido</td>
+                <td>@(item.EsActivo == true ? "Activo" : "Inactivo")</td>
+                <td style="text-align:center"><a style="text-decoration:none" asp-controller="Cliente" asp-action="Active" asp-route-id="@item.IdCliente">Activar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-controller="Cliente" asp-action="Lista" class="btn btn-primary mb-3">Volver</a>
+</div>
+
+<script>
+
+</script>
+
+
+
+

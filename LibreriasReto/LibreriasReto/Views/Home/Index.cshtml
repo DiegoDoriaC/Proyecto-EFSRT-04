@@ -2,12 +2,31 @@
     ViewData["Title"] = "Home Page";
 }
 
+@* @model LibreriasReto.DTO.AccesoDTO; *@
+
 <div class="text-center" style="margin-top:140px">
     <h3 class="display-5">Bienvenido a:</h3>
     <h1 class="display-1"><strong>Librerias Reto</strong></h1>
-    <p style="font-size:30px">[user.name]</p>
+    <p style="font-size:30px">hola</p>
 
     <p style="font-size:20px; margin-bottom:6px"><strong>La aplicación todavía se encuentra en desarrollo</strong></p>
     <p>es posible que algunas funcionalidades no se encuentren disponibles</p>
 
 </div>
+
+<script>       
+        const empleadoJson = '@Html.Raw(ViewBag.EmpleadoJson)';
+        localStorage.setItem('empleado', empleadoJson);       
+
+        const acceso = JSON.parse(localStorage.getItem('empleado'));
+        if (acceso) {
+            console.log(acceso)
+            console.log(acceso.idEmpleado);
+        } else {
+            console.log('No se encontró ningún objeto accesoDTO en el localStorage');
+        }
+
+    //});
+</script>
+
+

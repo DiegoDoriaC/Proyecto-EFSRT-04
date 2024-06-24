@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] LibreriasReto</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LibreriasReto.styles.css" asp-append-version="true" />
@@ -22,6 +23,9 @@
                         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="lista">Cliente</a></li>
                         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Empleado" asp-action="lista">Empleado</a></li>
                         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Libro" asp-action="lista">Libros</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Area" asp-action="lista">Areas</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Genero" asp-action="lista">Generos</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Recepcion" asp-action="lista">Recepciones</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,6 +42,10 @@
             &copy; 2024 - LibreriasReto - <a asp-area="" asp-controller="Home" asp-action="Privacy">Politicas de privacidad</a>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

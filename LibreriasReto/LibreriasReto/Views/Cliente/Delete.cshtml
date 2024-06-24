@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label>DNI</label>
-                <input class="form-control" asp-for="Dni" type="number" value="@Model.Dni" readonly />
+                <input class="form-control" asp-for="Dni" value="@Model.Dni" readonly />
             </div>
             <div class="mb-3">
                 <label>Nombre</label>
@@ -28,7 +28,7 @@
                 <input class="form-control" asp-for="Apellido" type="text" value="@Model.Apellido" readonly />
             </div>
             <div class="mb-3">
-                <button class="btn btn-danger" type="submit">Eliminar</button>
+                <button class="btn btn-danger" type="submit">Desactivar</button>
                 <a asp-controller="Cliente" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
             </div>
         </form>

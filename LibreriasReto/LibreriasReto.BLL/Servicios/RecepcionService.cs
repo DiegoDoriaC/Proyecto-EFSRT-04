@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Azure.Core.Pipeline;
 using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DAL.DBContext;
 using LibreriasReto.DAL.Repositorio.Contrato;
@@ -31,7 +33,7 @@ namespace LibreriasReto.BLL.Servicios
             RecepcionDTO cliente;
             try
             {
-                var clienteEncontrado = await _dbcontext.Set<Recepcion>().FirstOrDefaultAsync(u => u.IdRecepcion == id);
+                var clienteEncontrado = await _dbcontext.Set<Recepcion>().Include(recepcion => recepcion.IdLibroNavigation).FirstOrDefaultAsync(u => u.IdRecepcion == id);
                 if (clienteEncontrado == null) throw new TaskCanceledException("Recepcion no existe");
                 cliente = _mapper.Map<RecepcionDTO>(clienteEncontrado);
             }
@@ -42,30 +44,36 @@ namespace LibreriasReto.BLL.Servicios
             return cliente;
         }
 
-        public async Task<List<RecepcionDTO>> Listar()
+        public async Task<List<RecepcionDTO>> Listar(string nombre = "", string fechaInicio = "", string fechaFin = "")
         {
-            List<RecepcionDTO> listaClisentes;
+            List<RecepcionDTO> listaClientes;
             try
             {
-                var clientes = await _dbcontext.Set<Recepcion>().ToListAsync();
-                if (clientes.Count == 0) throw new TaskCanceledException("Ningun registro encontrado");
-                listaClisentes = _mapper.Map<List<RecepcionDTO>>(clientes);
+                var clientesEncontrados = await _dbcontext.Set<Recepcion>().Include(recepcion => recepcion.IdLibroNavigation).ToListAsync();
+                var filtroClientes = clientesEncontrados.ToList();
+                if(nombre.Trim() != "") filtroClientes = clientesEncontrados.Where(recepcion => recepcion.IdLibroNavigation.Nombre.ToLower().Contains(nombre.ToLower())).ToList();
+                if (fechaInicio.Trim() != "" && fechaFin.Trim() != "") 
+                {
+                    DateTime fecha_Inicio = Convert.ToDateTime(fechaInicio, new CultureInfo("es-PE"));
+                    DateTime fecha_Fin = Convert.ToDateTime(fechaFin, new CultureInfo("es-PE"));
+                    filtroClientes = filtroClientes.Where(recepcion => recepcion.FechaIngreso > fecha_Inicio && recepcion.FechaIngreso < fecha_Fin).ToList();
+                }
+                listaClientes = _mapper.Map<List<RecepcionDTO>>(filtroClientes);
             }
             catch
             {
                 throw;
             }
-            return listaClisentes;
+            return listaClientes;
         }
 
-        public async Task<bool> Registrar(RecepcionDTO cilente)
+        public async Task<bool> Registrar(RecepcionDTO cliente)
         {
             bool resultado = false;
             try
             {
-                if (cilente == null) throw new TaskCanceledException("Recepcion invalida");
-                await _repository.Registro(cilente);
-                resultado = true;
+                var clienteRegistrado = await _repository.Registro(cliente);
+                if(clienteRegistrado == true) resultado = true;
             }
             catch
             {

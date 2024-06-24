@@ -30,10 +30,16 @@ namespace LibreriasReto.BLL.Servicios
             {
                 if (libro != null)
                 {
-                    var clienteMapeado = _mapper.Map<Libro>(libro);
-                    _dbcontext.Update(clienteMapeado);
+                    var libroEncontrado = await _dbcontext.Set<Libro>().AsNoTracking().FirstOrDefaultAsync(l => l.IdLibro == libro.IdLibro);
+                    if (libroEncontrado == null) throw new TaskCanceledException("Libro no encontrado");
+                    var libroMapeado = _mapper.Map<Libro>(libro);
+                    libroMapeado.EsActivo = libroEncontrado.EsActivo;
+                    libroMapeado.Stock = libroEncontrado.Stock;
+                    _dbcontext.Update(libroMapeado);
                     await _dbcontext.SaveChangesAsync();
                     resultado = true;
+
+
                 }
             }
             catch
@@ -48,7 +54,7 @@ namespace LibreriasReto.BLL.Servicios
             LibroDTO cliente;
             try
             {
-                var clienteEncontrado = await _dbcontext.Set<Libro>().FirstOrDefaultAsync(u => u.IdLibro == id);
+                var clienteEncontrado = await _dbcontext.Set<Libro>().Include(libro => libro.IdGeneroNavigation).FirstOrDefaultAsync(u => u.IdLibro == id);
                 if (clienteEncontrado == null) throw new TaskCanceledException("Libro no existe");
                 cliente = _mapper.Map<LibroDTO>(clienteEncontrado);
             }
@@ -84,8 +90,38 @@ namespace LibreriasReto.BLL.Servicios
             try
             {
                 var clientes = await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == true).Include(i => i.IdGeneroNavigation).ToListAsync();
-                if (clientes.Count == 0) throw new TaskCanceledException("Ningun registro encontrado");
                 listaClisentes = _mapper.Map<List<LibroDTO>>(clientes);
+            }
+            catch
+            {
+                throw;
+            }
+            return listaClisentes;
+        }
+
+        public async Task<List<LibroDTO>> ListarTodo()
+        {
+            List<LibroDTO> listaClisentes;
+            try
+            {
+                var clientes = await _dbcontext.Set<Libro>().Include(libro => libro.IdGeneroNavigation).ToListAsync();
+                listaClisentes = _mapper.Map<List<LibroDTO>>(clientes);
+            }
+            catch
+            {
+                throw;
+            }
+            return listaClisentes;
+        }
+
+        public async Task<List<LibroDTO>> Filtrar(string nombre)
+        {
+            List<LibroDTO> listaClisentes;
+            List<Libro> librosConFiltro;
+            try
+            {
+                librosConFiltro = nombre == null || nombre.Trim() == "" ? await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == true).Include(i => i.IdGeneroNavigation).ToListAsync() : await _dbcontext.Set<Libro>().Where(libro => libro.EsActivo == true && libro.Nombre.Contains(nombre)).Include(i => i.IdGeneroNavigation).ToListAsync();
+                listaClisentes = _mapper.Map<List<LibroDTO>>(librosConFiltro);
             }
             catch
             {
@@ -101,8 +137,43 @@ namespace LibreriasReto.BLL.Servicios
             {
                 if (libro == null) throw new TaskCanceledException("Libro invalido");
                 var usuarioMappeado = _mapper.Map<Libro>(libro);
-                await _dbcontext.Set<Libro>().AddAsync(usuarioMappeado);
+                var libroCreado = await _dbcontext.Set<Libro>().AddAsync(usuarioMappeado);
                 await _dbcontext.SaveChangesAsync();
+                if(libroCreado.Entity.IdLibro != 0)
+                resultado = true;
+            }
+            catch
+            {
+                throw;
+            }
+            return resultado;
+        }
+
+        public async Task<List<LibroDTO>> ListarDesactivados()
+        {
+            List<LibroDTO> listaClisentes;
+            try
+            {
+                var clientes = await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == false).Include(i => i.IdGeneroNavigation).ToListAsync();
+                listaClisentes = _mapper.Map<List<LibroDTO>>(clientes);
+            }
+            catch
+            {
+                throw;
+            }
+            return listaClisentes;
+        }
+
+        public async Task<bool> Activar(int id)
+        {
+            bool resultado = false;
+            try
+            {
+                Libro? libro = await _dbcontext.Set<Libro>().FindAsync(id);
+                if (libro == null) throw new TaskCanceledException("Libro no encontrado");
+                libro.EsActivo = true;
+                _dbcontext.Set<Libro>().Update(libro);
+                _dbcontext.SaveChanges();
                 resultado = true;
             }
             catch

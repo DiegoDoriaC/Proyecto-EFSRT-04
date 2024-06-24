@@ -29,6 +29,10 @@ namespace LibreriasReto.Controllers
                 ViewBag.MENSAJE = "Dni o contraceña incorrecta";
                 return View("login");
             }
+            //TempData["usuarioId"] = logueo.IdEmpleado;
+            //TempData["usuarioNombre"] = logueo.EmpleadoNombre;
+
+            //ViewBag.LOGUEO = logueo;
             return RedirectToAction("Index", "Home");
         }
 

@@ -11,35 +11,42 @@
         <form asp-controller="Empleado" asp-action="Create" method="post">
             <div class="mb-3">
                 <label>IdArea</label>
-                <input class="form-control" asp-for="IdArea" type="number" />
+                <select asp-for="IdArea" asp-items="@ViewBag.GENEROS" class="form-select"></select>
             </div>
             <div class="mb-3">
                 <label>DNI</label>
-                <input class="form-control" asp-for="Dni" type="number" />
+                <input class="form-control" asp-for="Dni"/>
+                <span asp-validation-for="Dni" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Nombre</label>
                 <input class="form-control" asp-for="Nombre" type="text" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Apellido Completo</label>
                 <input class="form-control" asp-for="Apellido" type="text" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Telefono</label>
                 <input class="form-control" asp-for="Telefono" type="text" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>FechaIngreso</label>
                 <input class="form-control" asp-for="FechaIngreso" type="date" />
+                <span asp-validation-for="FechaIngreso" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Email</label>
                 <input class="form-control" asp-for="Email" type="text" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Direccion</label>
                 <input class="form-control" asp-for="Direccion" type="text" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
             <div class="mb-4">
                 <label>Estado</label>

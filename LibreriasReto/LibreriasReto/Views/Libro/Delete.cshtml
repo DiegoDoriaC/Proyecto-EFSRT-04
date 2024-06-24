@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="col-sm-8 offset-ms-2">
-        <form asp-controller="Empleado" asp-action="Delete" method="post">
+        <form asp-controller="Libro" asp-action="Delete" method="post">
             <div class="mb-3">
                 <label>ID</label>
                 <input class="form-control" asp-for="IdLibro" type="number" value="@Model.IdLibro" readonly />
@@ -36,7 +36,7 @@
                 <input class="form-control" asp-for="AnioPublicacion" type="text" value="@Model.AnioPublicacion" readonly />
             </div>
             <div class="mb-3">
-                <button class="btn btn-danger" type="submit">Eliminar</button>
+                <button class="btn btn-danger" type="submit">Desactivar</button>
                 <a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
             </div>
         </form>

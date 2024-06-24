@@ -1,0 +1,25 @@
+﻿@model IEnumerable<LibreriasReto.DTO.GeneroDTO>
+
+<h2 class="mb-3">Mantenimiento Generos Literarios</h2>
+<div style="display: flex">
+    <a asp-controller="Genero" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID Genero</th>
+            <th>Nombre</th>
+            <th style="text-align: center" colspan="1">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>@item.IdGenero</td>
+            <td>@item.Nombre</td>
+            <td style="text-align:center"><a style="text-decoration:none" asp-controller="Genero" asp-action="Update" asp-route-id="@item.IdGenero">Editar</a></td>
+        </tr>
+        }
+    </tbody>
+</table>

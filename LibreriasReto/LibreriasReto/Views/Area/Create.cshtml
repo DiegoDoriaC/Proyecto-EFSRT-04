@@ -1,0 +1,31 @@
+﻿@model LibreriasReto.DTO.AreaDTO
+
+
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2 class=" mb-4">Nueva Area Laboral</h2>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-4">
+                <label asp-for="Cargo" class=""></label>
+                <input asp-for="Cargo" class="form-control" />
+                <span asp-validation-for="Cargo" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-4">
+                <label asp-for="Sueldo" class="control-label"></label>
+                <input asp-for="Sueldo" class="form-control"/>
+                <span asp-validation-for="Sueldo" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-4">
+                <button class="btn btn-success" type="submit">Registrar</button>
+                <a asp-controller="Area" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

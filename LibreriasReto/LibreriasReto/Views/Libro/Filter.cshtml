@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<LibreriasReto.DTO.LibroDTO>;
+
+<div style="display: flex">
+    <a asp-controller="Libro" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
+    <form asp-controller="Libro" asp-action="Filter" method="post" class="ms-4">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+        <input name="busqueda" type="text" placeholder="Nombre" class="ms-2" />
+    </form>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Genero</th>
+            <th>Libro</th>
+            <th>Editorial</th>
+            <th>Stock</th>
+            <th style="text-align: center;" colspan="3">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nombreGenero</td>
+                <td>@item.Nombre</td>
+                <td>@item.Editorial</td>
+                <td class="stock"><strong>@item.Stock</strong></td>
+                <td style="text-align:center"><a style="text-decoration:none" asp-controller="Libro" asp-action="Update" asp-route-id="@item.IdLibro">Editar</a></td>
+                <td style="text-align:center"><a style="text-decoration:none" asp-controller="Libro" asp-action="Details" asp-route-id="@item.IdLibro">Detalles</a></td>
+                <td style="text-align:center"><a style="text-decoration:none" asp-controller="Libro" asp-action="Delete" asp-route-id="@item.IdLibro">Eliminar</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Libro" asp-action="lista" class="btn btn-success mb-3">Volver</a>
+
+<script>
+
+    const cantidades = document.querySelectorAll(".stock");
+    cantidades.forEach(function (cantidad) {
+        if (parseInt(cantidad.textContent) < 10) {
+            cantidad.style.color = "red";
+        }
+    });
+
+</script>
