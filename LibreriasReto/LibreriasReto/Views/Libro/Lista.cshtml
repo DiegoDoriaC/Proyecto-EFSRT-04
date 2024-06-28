@@ -1,4 +1,6 @@
-﻿@*
+﻿
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -9,14 +11,23 @@
 <h2 class="mb-3">Mantenimiento Libros</h2>
 <div style="display: flex; justify-content:space-between">
     <div style="display: flex;">
-        <a asp-controller="Libro" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
-        <form asp-controller="Libro" asp-action="Filter" method="post" class="ms-4">
-            <button type="submit" class="btn btn-primary">Buscar</button>
+        <a asp-controller="Libro" asp-action="Create" class="btn btn-success mb-3 d-flex align-items-center">
+            <span class="me-1">Nuevo</span>
+            <span class="material-symbols-outlined">add</span>
+        </a>
+        <form asp-controller="Libro" asp-action="Filter" method="post" class="ms-4 d-flex align-items-center" style="margin-top:-16px" >
+            <button style="display: flex" type="submit" class="btn btn-primary">
+                <span class="me-1">Buscar</span>
+                <span class="material-symbols-outlined">search</span>
+            </button>
             <input name="busqueda" type="text" placeholder="Ingresar nombre" class="ms-2"/>
         </form>
         
     </div>
-    <a asp-controller="Cliente" asp-action="ListaDesactivados" style="margin-right:0" class="desactivados mb-3">Clientes Inactivos</a>
+    <a asp-controller="Libro" asp-action="ListaDesactivados" style="margin-right:0" class="desactivados mb-3 d-flex align-items-center">
+        <span class="me-1">Libros Inactivos</span>
+        <span class="material-symbols-outlined">do_not_disturb_on</span>
+    </a>
 </div>
 <table class="table table-bordered table-striped">
     <thead>

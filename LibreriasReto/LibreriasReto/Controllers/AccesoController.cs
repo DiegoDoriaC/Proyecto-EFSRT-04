@@ -1,5 +1,8 @@
-﻿using LibreriasReto.BLL.Servicios.Contrato;
+﻿using System.Security.Claims;
+using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibreriasReto.Controllers
@@ -29,11 +32,21 @@ namespace LibreriasReto.Controllers
                 ViewBag.MENSAJE = "Dni o contraceña incorrecta";
                 return View("login");
             }
-            //TempData["usuarioId"] = logueo.IdEmpleado;
-            //TempData["usuarioNombre"] = logueo.EmpleadoNombre;
-
-            //ViewBag.LOGUEO = logueo;
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, logueo.EmpleadoNombre),
+                new Claim(ClaimTypes.Role, logueo.EmpleadoRol),
+                new Claim("idEmpleado", logueo.IdEmpleado.ToString())
+            };
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
             return RedirectToAction("Index", "Home");
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("login", "Acceso");
         }
 
     }

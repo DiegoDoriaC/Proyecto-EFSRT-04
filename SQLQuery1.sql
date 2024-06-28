@@ -106,7 +106,6 @@ go
 create table venta
 (
 	idVenta int primary key not null identity(6000,1),
-	idComprobante int references comprobante,
 	idlibro int references libro not null,
 	cantidad int not null,
 	precio decimal(10,2) not null,
@@ -158,7 +157,7 @@ insert into cliente values
 go
 
 insert into empleado values
-	(1, '16130376', 'Diego', 'Ñahui Rodriguez', '924221252', '13-02-2024', 'Diegoñ@gamil.com', 'Barrios Altos', 1),
+	(1, '16130376', 'Diego', 'nahui Rodriguez', '924221252', '13-02-2024', 'Diegon@gamil.com', 'Barrios Altos', 1),
 	(2, '16130376', 'Edwin', 'Castillo Reto', '974201252', '13-02-2024', 'EdwinC@gamil.com', 'AA.HH Vecino cuida mi calamina', 1)
 go
 

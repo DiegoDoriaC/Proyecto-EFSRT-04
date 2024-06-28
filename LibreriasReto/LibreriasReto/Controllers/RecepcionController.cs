@@ -3,8 +3,11 @@ using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace LibreriasReto.Controllers
 {
+    [Authorize]
     public class RecepcionController : Controller
     {
         private readonly IRecepcionService _servicio;

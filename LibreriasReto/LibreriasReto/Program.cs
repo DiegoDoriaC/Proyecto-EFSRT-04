@@ -1,9 +1,18 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using LibreriasReto.IOC;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.InyectarDependencias(builder.Configuration);
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option =>
+    {
+        option.LoginPath = "/Acceso/Login";
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        //option.AccessDeniedPath = "/Acceso/Login";
+    });
 
 
 var app = builder.Build();
@@ -24,6 +33,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthorization();
 
 app.UseAuthorization();
 

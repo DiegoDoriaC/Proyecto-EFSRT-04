@@ -11,7 +11,7 @@
         <form asp-controller="Libro" asp-action="Create" method="post">
             <div class="mb-3">
                 <label asp-for="IdGenero">Genero</label>
-                <select asp-for="IdGenero" asp-items="@ViewBag.GENEROS" class="form-select"></select>
+                <select asp-for="IdGenero" asp-items="@ViewBag.GENEROS" class="form-select"></select>                
             </div>
             <div class="mb-3">
                 <label>Libro</label>
@@ -51,7 +51,7 @@
             </div>
             <div class="mb-3">
                 <button class="btn btn-success" type="submit">Registrar</button>
-                <a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
+                <a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue; color:blue" class="btn">Volver</a>
             </div>
         </form>
     </div>

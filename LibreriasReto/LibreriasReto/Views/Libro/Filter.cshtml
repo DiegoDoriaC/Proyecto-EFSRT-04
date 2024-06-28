@@ -6,13 +6,19 @@
 @model List<LibreriasReto.DTO.LibroDTO>;
 
 <div style="display: flex">
-    <a asp-controller="Libro" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
-    <form asp-controller="Libro" asp-action="Filter" method="post" class="ms-4">
-        <button type="submit" class="btn btn-primary">Buscar</button>
-        <input name="busqueda" type="text" placeholder="Nombre" class="ms-2" />
+    <a asp-controller="Libro" asp-action="Create" class="btn btn-success mb-3 d-flex align-items-center">
+        <span class="me-1">Nuevo</span>
+        <span class="material-symbols-outlined">add</span>
+    </a>
+    <form asp-controller="Libro" asp-action="Filter" method="post" class="ms-4 d-flex align-items-center" style="margin-top:-16px">
+        <button style="display: flex" type="submit" class="btn btn-primary">
+            <span class="me-1">Buscar</span>
+            <span class="material-symbols-outlined">search</span>
+        </button>
+        <input name="busqueda" type="text" placeholder="Ingresar nombre" class="ms-2" />
     </form>
 </div>
-<table class="table table-bordered">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>Genero</th>
@@ -38,7 +44,8 @@
         }
     </tbody>
 </table>
-<a asp-controller="Libro" asp-action="lista" class="btn btn-success mb-3">Volver</a>
+
+<a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue; color:blue" class="btn">Volver</a>
 
 <script>
 

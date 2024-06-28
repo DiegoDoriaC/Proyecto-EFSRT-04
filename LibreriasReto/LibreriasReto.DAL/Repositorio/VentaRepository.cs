@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Drawing;
 using LibreriasReto.DAL.DBContext;
 using LibreriasReto.DAL.Repositorio.Contrato;
 using LibreriasReto.Models;
@@ -19,18 +20,28 @@ namespace LibreriasReto.DAL.Repositorio
             _dbContext = dbContext;
         }
 
-        public async Task<bool> RealizarVenta(Venta venta)
+        public async Task<bool> RealizarVenta(Comprobante comprobante)
         {
             bool respuesta = false;
             using (var transaction = _dbContext.Database.BeginTransaction())
             {
                 try
                 {
-                    var libroEncontrado = _dbContext.Set<Libro>().FirstOrDefault(u => u.IdLibro == venta.IdlibroNavigation.IdLibro);
-                    if (libroEncontrado == null) throw new Exception();
-                    if (libroEncontrado.Stock < venta.IdlibroNavigation.Stock) throw new Exception();
-                    libroEncontrado.Stock -= venta.IdlibroNavigation.Stock;
-                    await _dbContext.Set<Venta>().AddAsync(venta);
+                    decimal? importeTotal = 0;
+                    foreach (Venta item in comprobante.Venta)
+                    {
+                        var libroEncontrado = _dbContext.Set<Libro>().FirstOrDefault(u => u.IdLibro == item.Idlibro);
+                        libroEncontrado.Stock -= item.Cantidad;
+                        _dbContext.Set<Libro>().Update(libroEncontrado);     
+                        item.Precio = libroEncontrado.Precio;
+                        item.Total = item.Precio * item.Cantidad;
+                        importeTotal += item.Total;
+                    }
+                    await _dbContext.SaveChangesAsync();
+                    //comprobante.IdComprobante = 7000;
+                    //comprobante.Total = importeTotal;
+                    //comprobante.FechaVenta = null;
+                    await _dbContext.Set<Comprobante>().AddAsync(comprobante);
                     await _dbContext.SaveChangesAsync();
                     respuesta = true;
                     transaction.Commit();
@@ -38,6 +49,7 @@ namespace LibreriasReto.DAL.Repositorio
                 catch
                 {
                     transaction.Rollback();
+                    throw;
                 }
             }
             return respuesta;

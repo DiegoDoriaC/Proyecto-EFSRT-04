@@ -2,17 +2,23 @@
 
 <h2 class="mb-3">Historial de Recepciones</h2>
 <div style="display: flex; margin-left:-24px" class="my-4">
-    <form asp-controller="Recepcion" asp-action="Filter" method="post" class="ms-4">
-        <button type="submit" class="btn btn-primary">Buscar</button>
-        <label name="Nombre libro"></label>
-        <input name="nombre" type="text" placeholder="Ingresar nombre" class="ms-2" />
-        <label name="fecha inicio"></label>
-        <input name="fechaInicio" type="date" class="ms-2" />
-        <label name="fecha fin"></label>
-        <input name="fechaFin" type="date" class="ms-2" />
+    <form asp-controller="Recepcion" asp-action="Filter" method="post" class="ms-4 d-flex align-items-center" >
+        <button style="display: flex" type="submit" class="btn btn-primary">
+            <span class="me-1">Buscar</span>
+            <span class="material-symbols-outlined">search</span>
+        </button>
+        <div class="d-flex align-items-center ms-2">
+            <input id="nombre" name="nombre" type="text" placeholder="Ingresar nombre" class="form-control" />
+        </div>
+        <div class="d-flex align-items-center ms-2">
+            <input id="fechaInicio" name="fechaInicio" type="date" class="form-control" />
+        </div>
+        <div class="d-flex align-items-center ms-2">
+            <input id="fechaFin" name="fechaFin" type="date" class="form-control" />
+        </div>
     </form>
 </div>
-    <table class="table table-bordered">
+<table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -34,12 +40,7 @@
         </tbody>
     </table>
     <div class="botones-recepcion">
-        <a style="display:flex; width:170px; color:#198754; border:1px solid #198754" class="enlace" asp-action="ExportarExcel">
-            <span class="material-symbols-outlined">
-                description
-            </span> Exportar a Excel
-        </a>
-        <a asp-controller="Recepcion" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
+    <a asp-controller="Recepcion" asp-action="Lista" style="border: 1px solid blue; color:blue" class="btn">Volver</a>
     </div>
 <div class="reporte my-4">
     <h5>Ingresos registrados la última semana: <strong>@ViewBag.ReporteSemanal</strong></h5>

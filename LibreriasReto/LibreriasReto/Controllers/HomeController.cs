@@ -4,8 +4,11 @@ using LibreriasReto.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace LibreriasReto.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

@@ -14,5 +14,5 @@ public partial class Comprobante
     public virtual Cliente IdClienteNavigation { get; set; } = null!;
     public virtual Empleado IdEmpleadoNavigation { get; set; } = null!;
     public virtual MetodoPago IdMetodoPagoNavigation { get; set; } = null!;
-    public virtual ICollection<Venta> Venta { get; set; } = new List<Venta>();
+    public virtual List<Venta> Venta { get; set; } = new List<Venta>();
 }

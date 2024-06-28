@@ -1,4 +1,17 @@
-﻿@model LibreriasReto.DTO.AccesoDTO;
+﻿@{
+    Layout = null;
+}
+
+@model LibreriasReto.DTO.AccesoDTO;
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LibreriasReto.styles.css" asp-append-version="true" />
+</head>
 
 <style>
     .boton {
@@ -6,30 +19,44 @@
         border-radius: 4px;
         margin-left: 5px;
         height: 30px;
-        background-color: #e0e0e0; /* Color de fondo normal */
-        transition: background-color 0.2s ease; /* Transición para suavizar el cambio de color */
+        background-color: #e0e0e0;
+        transition: background-color 0.2s ease;
     }
 
     .boton:active,
     .boton:focus {
-        background-color: #c0c0c0; /* Color de fondo cuando se hace clic o el botón está enfocado */
-        outline: none; /* Eliminar el borde de enfoque predeterminado */
+        background-color: #c0c0c0;
+        outline: none;
     }
+
+    details summary {
+        font-size: 17px;
+        padding-left: 60px;
+    }
+
+    .toggle-password {
+        left: 270px;
+        top: 4px;
+        z-index: 1000;
+        cursor: pointer;  
+    }
+
 </style>
 
-<div style="display:flex;justify-content:center; gap:20px" class="mt-5">
+<div style="display:flex;justify-content:center;margin-top:80px; gap:20px" class="">
     <div style="width: 400px; padding:15px; border-right:1px solid black"  >
         <h3 class="mb-3" style="text-align:center">Ingresar</h3>
         <form asp-action="loginIngresar" method="post" style="width: 450px;">
             <div class="mb-3">
                 <label><strong>DNI:</strong></label>
                 <input id="pasteInputDni" name="clave" type="number" style="margin-left:74px"/>
-                <button id="pasteButtonDni" class="boton">pegar</button>
+                <button id="pasteButtonDni" class="boton">Pegar</button>
             </div>            
-            <div>
+            <div style="position:relative">
+                <span style="position:absolute" class="material-symbols-outlined toggle-password">visibility</span>
                 <label><strong>Contraceña:</strong></label>
                 <input id="pasteInputPassword" name="password" id="password" type="password" style="margin-left:18px" />
-                <button id="pastebuttonPassword" class="boton">pegar</button>
+                <button id="pastebuttonPassword" class="boton">Pegar</button>
             </div>
                 <button class="btn btn-success mt-3" style="margin-left:124px; width:130px" type="submit">Ingresar</button>
         </form>
@@ -42,61 +69,103 @@
         }
     </div>
     <div style="width:400px; height:100px; padding:15px; height:170px; align-items:center">
-        <h3 class="mb-3" style="text-align:center">Sesion de prueba</h3>
-        <div style="display:flex; justify-content:center; width:100%" class="mb-3">
-            <input id="copyInputDni" value="12345678"></input>
-            <button id="copyButtonDni" class="boton">Copiar</button>
-        </div>
-        <div style="display:flex; justify-content:center; width:100%">
-            <input id ="copyInputPassword" value="32207a220eed3e0e041190bb17e623c6c38f8ab4d65986084d5bd473a7a8b0d2" type="password"></input>
-            <button id="copyButtonPassword" class="boton">Copiar</button>
-        </div>
+        <h3 class="mb-3" style="text-align:center">Sesiones de Prueba</h3>
+        <details class="mb-2">
+            <summary style="align-self:center">Cuenta Vendedor</summary>
+            <div style="display:flex; justify-content:center; width:100%" class="mb-3">
+                <input id="copyInputDni" value="12345678" />
+                <button id="copyButtonDni" class="boton">Copiar</button>
+            </div>
+            <div style="display:flex; justify-content:center; width:100%">
+                <input id ="copyInputPassword" value="32207a220eed3e0e041190bb17e623c6c38f8ab4d65986084d5bd473a7a8b0d2" type="password" />
+                <button id="copyButtonPassword" class="boton">Copiar</button>
+            </div>
+        </details>
+        <details>
+            <summary>Cuenta Administrador</summary>
+            <div style="display:flex; justify-content:center; width:100%" class="mb-3">
+                <input id="copyInputDniAdmin" value="12345678" />
+                <button id="copyButtonDniAdmin" class="boton">Copiar</button>
+            </div>
+            <div style="display:flex; justify-content:center; width:100%">
+                <input id="copyInputPasswordAdmin" value="32207a220eed3e0e041190bb17e623c6c38f8ab4d65986084d5bd473a7a8b0d2" type="password" />
+                <button id="copyButtonPasswordAdmin" class="boton">Copiar</button>
+            </div>
+        </details>
     </div>
     </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 
 <script>
 
     document.addEventListener('DOMContentLoaded', function () {
-        const contra = document.getElementById('password');
+        const contra = document.getElementById('pasteInputPassword');
         contra.value = '';
-        
+
+        // Toggle password visibility
+        const togglePassword = document.querySelector('.toggle-password');
+        togglePassword.addEventListener('click', function () {
+            const type = contra.getAttribute('type') === 'password' ? 'text' : 'password';
+            contra.setAttribute('type', type);
+            this.textContent = type === 'password' ? 'visibility' : 'visibility_off';
+        });
     });
 
-    let dniCopiado
-    let passwordCopiado
+    let dniCopiado;
+    let passwordCopiado;
 
-    //inputs de ingresar
+    // Inputs de ingresar
     const pegarinputdni = document.getElementById("pasteInputDni");
     const pegarinputpass = document.getElementById("pasteInputPassword");
-    //botones de ingresar
+    // Botones de ingresar
     const pegarbotondni = document.getElementById("pasteButtonDni");
     const pegarbotonpass = document.getElementById("pastebuttonPassword");
-    //inputs de pueba
+    // Inputs de prueba
     const copiarinputdni = document.getElementById("copyInputDni");
     const copiarinputpass = document.getElementById("copyInputPassword");
-    // botones de prueba
+    // Botones de prueba
     const copiarbotondni = document.getElementById("copyButtonDni");
     const copiarbotonpass = document.getElementById("copyButtonPassword");
+    // Inputs de prueba ADMINISTRADOR
+    const copiarinputdniAdministrador = document.getElementById("copyInputDniAdmin");
+    const copiarinputpassAdministrador = document.getElementById("copyInputPasswordAdmin");
+    // Botones de prueba ADMINISTRADOR
+    const copiarbotondniAdministrador = document.getElementById("copyButtonDniAdmin");
+    const copiarbotonpassAdministrador = document.getElementById("copyButtonPasswordAdmin");
 
-    //eventos para copiar los inputs
+    // Eventos para copiar los inputs
     copiarbotondni.addEventListener("click", () => {
-        dniCopiado = copiarinputdni.value
+        dniCopiado = copiarinputdni.value;
     });
 
     copiarbotonpass.addEventListener("click", () => {
-        passwordCopiado = copiarinputpass.value
-    })
+        passwordCopiado = copiarinputpass.value;
+    });
+    // Eventos para copiar los inputs ADMINISTRADOR
+    copiarbotondniAdministrador.addEventListener("click", () => {
+        dniCopiado = copiarinputdniAdministrador.value;
+    });
 
-    //eventos para pegar en los inputs
+    copiarbotonpassAdministrador.addEventListener("click", () => {
+        passwordCopiado = copiarinputpassAdministrador.value;
+    });
+
+    // Eventos para pegar en los inputs
     pegarbotondni.addEventListener("click", (event) => {
         event.preventDefault();
-        pegarinputdni.value = dniCopiado
+        pegarinputdni.value = dniCopiado;
     });
 
     pegarbotonpass.addEventListener("click", (event) => {
         event.preventDefault();
-        pegarinputpass.value = passwordCopiado
+        pegarinputpass.value = passwordCopiado;
     });
 
 </script>

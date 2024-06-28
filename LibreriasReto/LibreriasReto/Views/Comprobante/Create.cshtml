@@ -1,0 +1,99 @@
+﻿@model LibreriasReto.DTO.ComprobanteDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ComprobanteDTO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="form-label">Codigo CLiente
+                <input  list="clientes" name="IdCliente" />
+                </label>
+                <datalist name="IdCliente" id="clientes">
+                    @foreach (var cliente in ViewBag.Clientes)
+                    {
+                        <option value="@cliente.IdCliente">@cliente.Nombre</option>
+                    }
+                </datalist>
+                <span asp-validation-for="IdCliente" class="text-danger"></span>
+            </div>
+            <input asp-for="IdEmpleado" class="form-control" hidden value="@int.Parse(User.Claims.FirstOrDefault(c => c.Type == "idEmpleado").Value)" />
+            <div class="form-group">
+                <label asp-for="IdMetodoPago">Metodo de Pago</label>
+                <select asp-for="IdMetodoPago" asp-items="@ViewBag.MetodoPago" class="form-select"></select>
+            </div>
+            <div class="form-group">
+                <label>Libro</label>
+                <select id="LibroSelect" class="form-select">
+                    @foreach (var libro in ViewBag.Libros)
+                    {
+                        <option value="@libro.IdLibro">@libro.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Cantidad</label>
+                <input id="Cantidad" type="number" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="button" id="addVenta" class="btn btn-primary">Add Venta</button>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <!-- Campos ocultos para enviar los datos de las ventas -->
+            <div id="ventasContainer"></div>
+        </form>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Libro</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="TablaVenta">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        document.getElementById('addVenta').addEventListener('click', function () {
+            var cantidad = document.getElementById('Cantidad').value;
+            var libroSelect = document.getElementById('LibroSelect');
+            var selectedLibro = libroSelect.options[libroSelect.selectedIndex];
+            var libroId = selectedLibro.value;
+            var libroNombre = selectedLibro.text;
+
+            var rowCount = document.getElementById('TablaVenta').rows.length;
+
+            var row = document.createElement('tr');
+            row.innerHTML = '<td>' + libroNombre + '</td>' +
+                '<td>' + cantidad + '</td>';
+
+            document.getElementById('TablaVenta').appendChild(row);
+
+            // Añadir campos ocultos para enviar los datos de las ventas
+            var ventasContainer = document.getElementById('ventasContainer');
+
+            var ventaFields = '<input type="" name="Venta[' + rowCount + '].Idlibro" value="' + libroId + '" />' +
+                '<input type="" name="Venta[' + rowCount + '].nombreLibro" value="' + libroNombre + '" />' +
+                '<input type="" name="Venta[' + rowCount + '].Cantidad" value="' + cantidad + '" />';
+            ventasContainer.innerHTML += ventaFields;
+        });
+    </script>
+}

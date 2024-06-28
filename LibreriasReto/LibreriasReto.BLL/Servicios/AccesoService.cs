@@ -31,7 +31,7 @@ namespace LibreriasReto.BLL.Servicios
             {
                 string dni = clave.ToString();
                 //string passwordEncriptado = Encriptacion.GetSHA256(password);
-                var listaAcceso = await _context.Set<Acceso>().Include(a => a.IdEmpleadoNavigation).FirstOrDefaultAsync(u => u.dniEmpleado == dni && u.Clave == password);
+                var listaAcceso = await _context.Set<Acceso>().Include(a => a.IdEmpleadoNavigation).ThenInclude(c => c.IdAreaNavigation).FirstOrDefaultAsync(u => u.dniEmpleado == dni && u.Clave == password);
                 accesoMappeado = _mapper.Map<AccesoDTO>(listaAcceso);
             }
             catch

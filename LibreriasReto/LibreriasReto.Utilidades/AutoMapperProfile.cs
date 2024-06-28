@@ -12,7 +12,8 @@ namespace LibreriasReto.Utilidades
 
             #region Acceso
             CreateMap<Acceso, AccesoDTO>()
-                .ForMember(destino => destino.EmpleadoNombre, options => options.MapFrom(origen => origen.IdEmpleadoNavigation.Nombre));
+                .ForMember(destino => destino.EmpleadoNombre, options => options.MapFrom(origen => origen.IdEmpleadoNavigation.Nombre))
+                .ForMember(destino => destino.EmpleadoRol, options => options.MapFrom(origen => origen.IdEmpleadoNavigation.IdAreaNavigation.Cargo));
             #endregion Acceso
 
             #region AccesoDTO
@@ -58,10 +59,6 @@ namespace LibreriasReto.Utilidades
                 .ForMember(d => d.AnioPublicacion, op => op.MapFrom(or => Convert.ToInt32(or.AnioPublicacion)));
             #endregion LibroDTO
 
-            #region MetodoPago
-            CreateMap<MetodoPago, MetodoPagoDTO>().ReverseMap();
-            #endregion MetodoPago
-
             #region Recepcion
             CreateMap<Recepcion, RecepcionDTO>()
                 .ForMember(d => d.nombreLibro, op => op.MapFrom(or => or.IdLibroNavigation.Nombre))
@@ -99,6 +96,10 @@ namespace LibreriasReto.Utilidades
                 .ForMember(d => d.IdMetodoPagoNavigation, op => op.Ignore())
                 .ForMember(d => d.FechaVenta, op => op.MapFrom(or => Convert.ToDateTime(or.FechaVenta, new CultureInfo("es-PE"))));
             #endregion ComprobanteDTO
+
+            #region MetodoPago
+            CreateMap<MetodoPago, MetodoPagoDTO>().ReverseMap();
+            #endregion MetodoPago
 
         }
     }

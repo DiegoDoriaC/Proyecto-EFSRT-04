@@ -5,9 +5,14 @@ using LibreriasReto.DTO;
 using LibreriasReto.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+
+//using Microsoft.AspNetCore.Authorization;
 
 namespace LibreriasReto.Controllers
 {
+    [Authorize]
+    //[Authorize(Roles = "Vendedors")]
     public class LibroController : Controller
     {
         private readonly ILibroService _servicio;
@@ -22,6 +27,7 @@ namespace LibreriasReto.Controllers
         [HttpGet]
         public async Task<IActionResult> Lista()
         {
+            var idEmpleado = User.Claims.FirstOrDefault(c => c.Type == "idEmpleado");
             var libros = await _servicio.Listar();
             return View(libros);
         }

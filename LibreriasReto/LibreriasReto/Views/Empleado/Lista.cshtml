@@ -8,8 +8,14 @@
 
 <h2 class="mb-3">Mantenimiento Empleado</h2>
 <div style="width:100%; display:flex; justify-content:space-between">
-    <a asp-controller="empleado" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
-    <a asp-controller="empleado" asp-action="ListaDesactivados" class="desactivados mb-3">Clientes Inactivos</a>    
+    <a asp-controller="empleado" asp-action="Create" class="btn btn-success mb-3 d-flex align-items-center">
+        <span class="me-1">Nuevo</span>
+        <span class="material-symbols-outlined">add</span>
+    </a>
+    <a asp-controller="empleado" asp-action="ListaDesactivados" class="desactivados mb-3 d-flex align-items-center">
+        <span class="me-1">Empleados Inactivos</span>
+        <span class="material-symbols-outlined">do_not_disturb_on</span>
+    </a>    
 </div>
 <table class="table table-bordered table-striped">
     <thead>

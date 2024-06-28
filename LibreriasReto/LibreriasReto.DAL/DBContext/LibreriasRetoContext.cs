@@ -261,13 +261,13 @@ public partial class LibreriasRetoContext : DbContext
 
         modelBuilder.Entity<Venta>(entity =>
         {
+
             entity.HasKey(e => e.IdVenta).HasName("PK__venta__077D5614B80C7E9F");
 
             entity.ToTable("venta");
 
             entity.Property(e => e.IdVenta).HasColumnName("idVenta");
             entity.Property(e => e.Cantidad).HasColumnName("cantidad");
-            entity.Property(e => e.IdComprobante).HasColumnName("idComprobante");
             entity.Property(e => e.Idlibro).HasColumnName("idlibro");
             entity.Property(e => e.Precio)
                 .HasColumnType("decimal(10, 2)")
@@ -276,14 +276,10 @@ public partial class LibreriasRetoContext : DbContext
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("total");
 
-            entity.HasOne(d => d.IdComprobanteNavigation).WithMany(p => p.Venta)
-                .HasForeignKey(d => d.IdComprobante)
-                .HasConstraintName("FK__venta__idComprob__693CA210");
-
             entity.HasOne(d => d.IdlibroNavigation).WithMany(p => p.Venta)
                 .HasForeignKey(d => d.Idlibro)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__venta__idlibro__6A30C649");
+                .HasConstraintName("FK__venta__idlibro__6A30C649");            
         });
 
         OnModelCreatingPartial(modelBuilder);

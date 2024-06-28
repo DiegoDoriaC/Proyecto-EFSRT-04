@@ -2,8 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using LibreriasReto.DTO;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace LibreriasReto.Controllers
 {
+    [Authorize]
     public class AreaController : Controller
     {
 

@@ -9,6 +9,6 @@ namespace LibreriasReto.DAL.Repositorio.Contrato
 {
     public interface IVentaRepository
     {
-        Task<bool> RealizarVenta(Venta venta);
+        Task<bool> RealizarVenta(Comprobante comprobante);
     }
 }

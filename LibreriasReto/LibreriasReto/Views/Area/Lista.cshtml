@@ -2,10 +2,13 @@
 
 <h2 class="mb-3">Mantenimiento Areas Laborales</h2>
 <div style="display: flex">
-    <a asp-controller="Area" asp-action="Create" class="btn btn-success mb-3">Nuevo</a>
+    <a asp-controller="Area" asp-action="Create" class="btn btn-success mb-3 d-flex align-items-center">
+        <span class="me-1">Nuevo</span>
+        <span class="material-symbols-outlined">add</span>
+    </a>
 </div>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>ID Area</th>

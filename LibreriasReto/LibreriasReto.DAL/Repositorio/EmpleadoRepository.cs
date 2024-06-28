@@ -29,7 +29,7 @@ namespace LibreriasReto.DAL.Repositorio
                     {
                         IdEmpleado = empleados.Entity.IdEmpleado,
                         dniEmpleado = empleado.Dni,
-                        Clave = Encriptacion.GetSHA256(empleado.Dni + empleado.Telefono.Substring(empleado.Telefono.Length - 2))
+                        Clave = Encriptacion.GetSHA256(empleado.Dni)
                     };
                     await _dbContext.Set<Acceso>().AddAsync(acceso);
                     await _dbContext.SaveChangesAsync();

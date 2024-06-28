@@ -29,7 +29,7 @@
             </div>
             <div class="mb-3">
                 <label>Precio</label>
-                <input class="form-control" asp-for="Precio" type="number" value="@Model.Precio" readonly />
+                <input class="form-control" asp-for="Precio" type="text" value="S/. @Model.Precio" readonly />
             </div>
             <div class="mb-3">
                 <label>Publicacion</label>
@@ -37,7 +37,7 @@
             </div>
             <div class="mb-3">
                 <button class="btn btn-danger" type="submit">Desactivar</button>
-                <a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue;" class="btn">Volver</a>
+                <a asp-controller="Libro" asp-action="Lista" style="border: 1px solid blue; color:blue" class="btn">Volver</a>
             </div>
         </form>
     </div>

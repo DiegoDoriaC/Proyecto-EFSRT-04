@@ -5,8 +5,11 @@ using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace LibreriasReto.Controllers
 {
+    [Authorize]
     public class EmpleadoController : Controller
     {
         private readonly IEmpleadoService _servicio;

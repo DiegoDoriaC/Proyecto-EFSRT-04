@@ -40,8 +40,9 @@ namespace LibreriasReto.IOC
             services.AddScoped<IRecepcionService, RecepcionService>();
             services.AddScoped<IGeneroService, GeneroService>();
             services.AddScoped<IAreaService, AreaService>();
+            services.AddScoped<IComprobanteServices, ComprobanteService>();
+            services.AddScoped<IMetodoPagoService, MetodoPagoService>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
-            //services.AddScoped<IComprobanteServices, ComprobanteService>();
             //services.AddScoped<IVentaService, VentaService>();
 
         }
