@@ -36,11 +36,10 @@ namespace LibreriasReto.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ComprobanteDTO comprobante)
         {
-            List<VentaDTO> ventaRegitrada = comprobante.Venta;
-            ViewBag.RegistrarVenta = "No se pudo registrar la venta";
+            ViewBag.RegistrarVenta = null;
             bool response = await _comprobanteServices.Registrar(comprobante);
-            if (response) ViewBag.RegistrarVenta = "Venta registrada satisfactoriamente";
-            return View();
+            ViewBag.RegistrarVenta = response == true ? "Venta registrada satisfactoriamente" : "No se pudo registrar la venta";
+            return RedirectToAction(nameof(Create));
         }
     }
 }

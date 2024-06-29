@@ -22,7 +22,7 @@ namespace LibreriasReto.DAL.Repositorio
 
         public async Task<bool> RealizarVenta(Comprobante comprobante)
         {
-            bool respuesta = false;
+            bool respuesta;
             using (var transaction = _dbContext.Database.BeginTransaction())
             {
                 try
@@ -31,6 +31,10 @@ namespace LibreriasReto.DAL.Repositorio
                     foreach (Venta item in comprobante.Venta)
                     {
                         var libroEncontrado = _dbContext.Set<Libro>().FirstOrDefault(u => u.IdLibro == item.Idlibro);
+                        if(libroEncontrado.Stock < item.Cantidad)
+                        {
+                            return false;
+                        }
                         libroEncontrado.Stock -= item.Cantidad;
                         _dbContext.Set<Libro>().Update(libroEncontrado);     
                         item.Precio = libroEncontrado.Precio;
@@ -39,8 +43,8 @@ namespace LibreriasReto.DAL.Repositorio
                     }
                     await _dbContext.SaveChangesAsync();
                     //comprobante.IdComprobante = 7000;
-                    //comprobante.Total = importeTotal;
-                    //comprobante.FechaVenta = null;
+                    comprobante.Total = importeTotal;
+                    comprobante.FechaVenta = null;
                     await _dbContext.Set<Comprobante>().AddAsync(comprobante);
                     await _dbContext.SaveChangesAsync();
                     respuesta = true;

@@ -268,6 +268,7 @@ public partial class LibreriasRetoContext : DbContext
 
             entity.Property(e => e.IdVenta).HasColumnName("idVenta");
             entity.Property(e => e.Cantidad).HasColumnName("cantidad");
+            entity.Property(e => e.IdComprobante).HasColumnName("idComprobante");
             entity.Property(e => e.Idlibro).HasColumnName("idlibro");
             entity.Property(e => e.Precio)
                 .HasColumnType("decimal(10, 2)")
@@ -275,6 +276,10 @@ public partial class LibreriasRetoContext : DbContext
             entity.Property(e => e.Total)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("total");
+
+            entity.HasOne(d => d.IdComprobanteNavigation).WithMany(p => p.Venta)
+                .HasForeignKey(d => d.IdComprobante)
+                .HasConstraintName("FK__venta__idComprob__75A278F5");
 
             entity.HasOne(d => d.IdlibroNavigation).WithMany(p => p.Venta)
                 .HasForeignKey(d => d.Idlibro)

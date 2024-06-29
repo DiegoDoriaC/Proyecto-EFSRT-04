@@ -91,7 +91,7 @@ create table recepcion
 	fechaIngreso date
 );
 go
-
+select * from comprobante
 create table comprobante
 (
 	idComprobante int primary key not null identity(7000,1),
@@ -103,15 +103,19 @@ create table comprobante
 );
 go
 
+
+select * from Venta
 create table venta
 (
 	idVenta int primary key not null identity(6000,1),
+	idComprobante int references comprobante,
 	idlibro int references libro not null,
 	cantidad int not null,
 	precio decimal(10,2) not null,
 	total decimal(10,2)
 );
 go
+
 
 --INGRESO DE REGISTROS POR DEFAULT--
 insert into area values
@@ -190,5 +194,4 @@ select * from libro;
 select * from acceso;
 select * from recepcion;
 
-update libro set stock = 0, esActivo = 1
-update cliente set esActivo = 1
+
