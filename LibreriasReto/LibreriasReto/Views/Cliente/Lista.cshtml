@@ -4,7 +4,7 @@
 @{
 }
 
-@model List<LibreriasReto.DTO.ClienteDTO>;
+@model LibreriasReto.DTO.PaginacionModelo<LibreriasReto.DTO.ClienteDTO>;
 
 <h2 class="mb-3">Mantenimiento Clientes</h2>
 <div style="width:100%; display:flex; justify-content:space-between">
@@ -29,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.listaGenerica)
         {
             <tr>
                 <td>@item.IdCliente</td>
@@ -51,6 +51,10 @@
         </span> Exportar a Excel
     </a>
 </div>
+
+@{
+    Html.RenderPartial("_paginacion", Model);
+}
 
 <style>
     .enlace {

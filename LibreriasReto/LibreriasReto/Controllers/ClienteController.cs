@@ -5,6 +5,7 @@ using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 using Microsoft.AspNetCore.Authorization;
+using LibreriasReto.Models;
 
 namespace LibreriasReto.Controllers
 {
@@ -20,10 +21,22 @@ namespace LibreriasReto.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(int pagina = 1)
         {
             var listado = await _servicio.Listar();
-            return View(listado);
+
+            int cantidadRegistrosPorPagina = 10;
+            var librosParaLaPaginacion = listado.Skip((pagina - 1) * cantidadRegistrosPorPagina).Take(cantidadRegistrosPorPagina).ToList();
+            var totalDeRegistros = listado.Count();
+            //CODIGO PARA LA PAGINACION            
+            var modelo = new PaginacionModelo<ClienteDTO>();
+            modelo.listaGenerica = librosParaLaPaginacion;
+            modelo.PaginaActual = pagina;
+            modelo.TotalDeRegistros = totalDeRegistros;
+            modelo.RegistrosPorPagina = cantidadRegistrosPorPagina;
+
+
+            return View(modelo);
         }
 
         [HttpGet]

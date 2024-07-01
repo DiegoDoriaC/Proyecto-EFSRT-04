@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{553D260C-3529-4B58-AA4C-E217B715A5C1}|LibreriasReto\\LibreriasReto.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto\\views\\comprobante\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{553D260C-3529-4B58-AA4C-E217B715A5C1}|LibreriasReto\\LibreriasReto.csproj|solutionrelative:libreriasreto\\views\\comprobante\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{553D260C-3529-4B58-AA4C-E217B715A5C1}|LibreriasReto\\LibreriasReto.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto\\controllers\\comprobantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{553D260C-3529-4B58-AA4C-E217B715A5C1}|LibreriasReto\\LibreriasReto.csproj|solutionrelative:libreriasreto\\controllers\\comprobantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96A890B-13A5-4172-AD5E-130ACB74F32F}|LibreriasReto.DAL\\LibreriasReto.DAL.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto.dal\\repositorio\\ventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96A890B-13A5-4172-AD5E-130ACB74F32F}|LibreriasReto.DAL\\LibreriasReto.DAL.csproj|solutionrelative:libreriasreto.dal\\repositorio\\ventarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{035D23B4-F335-4A2D-AAE9-CB94B9AF8AF3}|LibreriasReto.DTO\\LibreriasReto.DTO.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto.dto\\comprobantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{035D23B4-F335-4A2D-AAE9-CB94B9AF8AF3}|LibreriasReto.DTO\\LibreriasReto.DTO.csproj|solutionrelative:libreriasreto.dto\\comprobantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B96A890B-13A5-4172-AD5E-130ACB74F32F}|LibreriasReto.DAL\\LibreriasReto.DAL.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto.dal\\dbcontext\\libreriasretocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B96A890B-13A5-4172-AD5E-130ACB74F32F}|LibreriasReto.DAL\\LibreriasReto.DAL.csproj|solutionrelative:libreriasreto.dal\\dbcontext\\libreriasretocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F5E2C86-7C7B-497E-A231-FACAB1A67CD7}|LibreriasReto.Models\\LibreriasReto.Models.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto.models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F5E2C86-7C7B-497E-A231-FACAB1A67CD7}|LibreriasReto.Models\\LibreriasReto.Models.csproj|solutionrelative:libreriasreto.models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F5E2C86-7C7B-497E-A231-FACAB1A67CD7}|LibreriasReto.Models\\LibreriasReto.Models.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto.models\\comprobante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F5E2C86-7C7B-497E-A231-FACAB1A67CD7}|LibreriasReto.Models\\LibreriasReto.Models.csproj|solutionrelative:libreriasreto.models\\comprobante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{035D23B4-F335-4A2D-AAE9-CB94B9AF8AF3}|LibreriasReto.DTO\\LibreriasReto.DTO.csproj|c:\\users\\diego d\\desktop\\experiencias formativas\\libreriasreto\\libreriasreto.dto\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{035D23B4-F335-4A2D-AAE9-CB94B9AF8AF3}|LibreriasReto.DTO\\LibreriasReto.DTO.csproj|solutionrelative:libreriasreto.dto\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 537,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,105 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ComprobanteDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\ComprobanteDTO.cs",
-              "RelativeDocumentMoniker": "LibreriasReto.DTO\\ComprobanteDTO.cs",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\ComprobanteDTO.cs",
-              "RelativeToolTip": "LibreriasReto.DTO\\ComprobanteDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T00:38:04.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LibreriasRetoContext.cs",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DAL\\DBContext\\LibreriasRetoContext.cs",
-              "RelativeDocumentMoniker": "LibreriasReto.DAL\\DBContext\\LibreriasRetoContext.cs",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DAL\\DBContext\\LibreriasRetoContext.cs",
-              "RelativeToolTip": "LibreriasReto.DAL\\DBContext\\LibreriasRetoContext.cs",
-              "ViewState": "AQIAAN0AAAAAAAAAAAAAABoBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T00:13:31.294Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VentaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DAL\\Repositorio\\VentaRepository.cs",
-              "RelativeDocumentMoniker": "LibreriasReto.DAL\\Repositorio\\VentaRepository.cs",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DAL\\Repositorio\\VentaRepository.cs",
-              "RelativeToolTip": "LibreriasReto.DAL\\Repositorio\\VentaRepository.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwCUAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T23:35:40.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VentaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\VentaDTO.cs",
-              "RelativeDocumentMoniker": "LibreriasReto.DTO\\VentaDTO.cs",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\VentaDTO.cs",
-              "RelativeToolTip": "LibreriasReto.DTO\\VentaDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T23:21:22.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ComprobanteController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto\\Controllers\\ComprobanteController.cs",
-              "RelativeDocumentMoniker": "LibreriasReto\\Controllers\\ComprobanteController.cs",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto\\Controllers\\ComprobanteController.cs",
-              "RelativeToolTip": "LibreriasReto\\Controllers\\ComprobanteController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAUwCIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T23:41:14.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Comprobante.cs",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\Comprobante.cs",
-              "RelativeDocumentMoniker": "LibreriasReto.Models\\Comprobante.cs",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\Comprobante.cs",
-              "RelativeToolTip": "LibreriasReto.Models\\Comprobante.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T23:39:07.979Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Venta.cs",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\Venta.cs",
-              "RelativeDocumentMoniker": "LibreriasReto.Models\\Venta.cs",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\Venta.cs",
-              "RelativeToolTip": "LibreriasReto.Models\\Venta.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T22:09:14.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto\\Views\\Comprobante\\Create.cshtml",
-              "RelativeDocumentMoniker": "LibreriasReto\\Views\\Comprobante\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto\\Views\\Comprobante\\Create.cshtml",
-              "RelativeToolTip": "LibreriasReto\\Views\\Comprobante\\Create.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAiwE0AAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-26T22:16:59.162Z",
-              "EditorCaption": ""
             }
           ]
         }

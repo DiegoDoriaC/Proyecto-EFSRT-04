@@ -6,7 +6,7 @@
 @{
 }
 
-@model List<LibreriasReto.DTO.LibroDTO>;
+@model LibreriasReto.DTO.PaginacionModelo<LibreriasReto.DTO.LibroDTO>;
 
 <h2 class="mb-3">Mantenimiento Libros</h2>
 <div style="display: flex; justify-content:space-between">
@@ -40,7 +40,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.listaGenerica)
         {
             <tr>
                 <td>@item.nombreGenero</td>
@@ -63,6 +63,8 @@
         </span> Exportar a Excel
     </a>
 </div>
+
+@{ Html.RenderPartial("_paginacion", Model); }
 
 <style>
     .enlace {
@@ -118,7 +120,7 @@
 
      const cantidades = document.querySelectorAll(".stock");
      cantidades.forEach(function (cantidad) {
-         if (parseInt(cantidad.textContent) < 10) {
+         if (parseInt(cantidad.textContent) < 5) {
              cantidad.style.color = "red";
          }
      });

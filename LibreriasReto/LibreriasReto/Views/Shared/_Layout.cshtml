@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,15 +22,20 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="lista">Cliente</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Empleado" asp-action="lista">Empleado</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Libro" asp-action="lista">Libros</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Area" asp-action="lista">Areas</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Genero" asp-action="lista">Generos</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Recepcion" asp-action="lista">Recepciones</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Comprobante" asp-action="Create">Ventas</a></li>
+                        <li class="nav-item ms-2 me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Comprobante" asp-action="Create">Vender</a></li>
+                        <li class="nav-item me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="lista">Cliente</a></li>                        
+                        <li class="nav-item me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Libro" asp-action="lista">Libros</a></li>
+                        @if (User.IsInRole("Administrador"))
+                        {
+                            <li class="nav-item me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Empleado" asp-action="lista">Empleado</a></li>
+                            <li class="nav-item me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Area" asp-action="lista">Areas</a></li>
+                            <li class="nav-item me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Genero" asp-action="lista">Generos</a></li>
+                            <li class="nav-item me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Recepcion" asp-action="lista">Recepciones</a></li>
+                            <li class="nav-item me-3"><a class="nav-link text-dark" asp-area="" asp-controller="Comprobante" asp-action="Reportes">Reportes Ventas</a></li>
+                        }
                     </ul>
                     <ul class="navbar-nav ms-auto">
+                        <span style="margin-top:7px" class="me-4"><strong>Usuario: @(User.Identity.Name)</strong></span>
                         <li class="nav-item d-flex align-items-center">
                             <a class="btn btn-danger d-flex align-items-center" asp-area="" asp-controller="Acceso" asp-action="Logout">
                                 <span class="me-2">Salir</span>

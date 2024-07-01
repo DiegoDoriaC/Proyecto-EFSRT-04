@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity;
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,10 +9,7 @@
 <div class="text-center" style="margin-top:140px">
     <h3 class="display-5">Bienvenido a:</h3>
     <h1 class="display-1"><strong>Librerias Reto</strong></h1>
-    <p style="font-size:30px">hola</p>
-
-    <p style="font-size:20px; margin-bottom:6px"><strong>La aplicación todavía se encuentra en desarrollo</strong></p>
-    <p>es posible que algunas funcionalidades no se encuentren disponibles</p>
+    <p style="font-size:30px">Usuario: @(User.Identity.Name)</p>
 
 </div>
 
@@ -26,7 +25,7 @@
             console.log('No se encontró ningún objeto accesoDTO en el localStorage');
         }
 
-    //});
+   
 </script>
 
 

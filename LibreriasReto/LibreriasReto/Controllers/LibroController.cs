@@ -2,17 +2,16 @@
 using System.Data;
 using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
-using LibreriasReto.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
 
-//using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LibreriasReto.Controllers
 {
     [Authorize]
-    //[Authorize(Roles = "Vendedors")]
+    [Authorize(Roles = "Vendedor,Administrador")]
     public class LibroController : Controller
     {
         private readonly ILibroService _servicio;
@@ -25,11 +24,20 @@ namespace LibreriasReto.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(int pagina = 1)
         {
-            var idEmpleado = User.Claims.FirstOrDefault(c => c.Type == "idEmpleado");
+            //var idEmpleado = User.Claims.FirstOrDefault(c => c.Type == "idEmpleado");
             var libros = await _servicio.Listar();
-            return View(libros);
+            int cantidadRegistrosPorPagina = 10;
+            var librosParaLaPaginacion = libros.Skip((pagina -1) * cantidadRegistrosPorPagina).Take(cantidadRegistrosPorPagina).ToList();
+            var totalDeRegistros = libros.Count();
+            //CODIGO PARA LA PAGINACION            
+            var modelo = new PaginacionModelo<LibroDTO>();
+            modelo.listaGenerica = librosParaLaPaginacion;
+            modelo.PaginaActual = pagina;
+            modelo.TotalDeRegistros = totalDeRegistros;
+            modelo.RegistrosPorPagina = cantidadRegistrosPorPagina;
+            return View(modelo);
         }
 
         [HttpGet]
@@ -58,7 +66,6 @@ namespace LibreriasReto.Controllers
         {
             return View(await _servicio.Buscar(id));
         }
-
 
         [HttpGet]
         public async Task<IActionResult> Create()

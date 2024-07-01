@@ -1,0 +1,67 @@
+﻿
+@model List<LibreriasReto.DTO.ComprobanteDTO>;
+
+@{
+    ViewData["Title"] = "Reportes";
+}
+
+<h1>Reportes</h1>
+<div style="display: flex; margin-left:-24px" class="my-4">
+    <form asp-controller="Comprobante" asp-action="Reportes" method="post" class="ms-4 d-flex align-items-center">
+        <button style="display: flex" type="submit" class="btn btn-primary">
+            <span class="me-1">Buscar</span>
+            <span class="material-symbols-outlined">search</span>
+        </button>
+        <div class="d-flex align-items-center ms-2">
+            <input id="nombre" name="empleado" type="text" placeholder="Nombre empleado" class="form-control" />
+        </div> 
+    </form>
+</div>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id Comprobante
+            </th>
+            <th>
+                Nombre Empleado
+            </th>
+            <th>
+                Metodo de Pago
+            </th>
+            <th>
+                Importe Total
+            </th>
+            <th>
+                Fecha Venta
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdComprobante)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombreEmpleado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombreMetodoPago)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaVenta)
+                </td>
+            </tr>            
+        }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,106 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model LibreriasReto.DTO.PaginacionModelo<LibreriasReto.DTO.ClienteDTO>;
+
+@{
+    var cantidadPaginas = (int)Math.Ceiling((double)Model.TotalDeRegistros / Model.RegistrosPorPagina);
+}
+
+<ul class="pagination my-3">
+    @if(Model.PaginaActual == 1)
+    {
+        <li class="paginationDesactivo me-2"><a>@Html.ActionLink("Anterior", null, new { pagina = 1 })</a></li>
+    }
+    else
+    {
+        <li class="paginationActivo me-2"><a>@Html.ActionLink("Anterior", null, new { pagina = Model.PaginaActual - 1 })</a></li>
+    }
+    @if(Model.PaginaActual == cantidadPaginas)
+    {
+        <li class="paginationDesactivo"><a>@Html.ActionLink("Siguiente", null, new { pagina = cantidadPaginas })</a></li>
+    }
+    else
+    {
+        <li class="paginationActivo"><a>@Html.ActionLink("Siguiente", null, new { pagina = Model.PaginaActual + 1 })</a></li>
+    }    
+</ul>
+
+<style>
+    .paginationActivo {
+        border: 1px solid blue;
+        border-radius: 4px;
+        text-decoration: none !important;
+        padding: 5px 10px;
+        text-align:center;
+
+    }
+    .paginationActivo > a {
+        width: 100px;
+        text-decoration: none !important;
+        }
+
+    .paginationDesactivo {
+        border: 1px solid #333333;
+        border-radius: 4px;
+        background-color: #9d9d9d;
+        text-decoration: none !important;
+        padding: 5px 10px;
+        text-align: center;
+        cursor: default;        
+        pointer-events: none;
+    }
+
+        .paginationDesactivo > a {
+            width: 100px;
+            color: #333333;
+            pointer-events: none;
+            cursor: default;
+            text-decoration: none !important;
+        }
+</style>
+
+<script>
+
+</script>
+
+<!--
+@{
+    int inicial = 1;
+    var radio = 3;
+    var cantidadMaximaDePaginas = radio * 2 + 1;
+    int final = (cantidadPaginas > cantidadMaximaDePaginas) ? cantidadMaximaDePaginas : cantidadPaginas;
+    if(Model.PaginaActual > radio + 1)
+    {
+        inicial = Model.PaginaActual - radio;
+        if(cantidadPaginas > Model.PaginaActual + radio)
+        {
+            final = Model.PaginaActual + radio;
+        }
+        else
+        {
+            final = cantidadPaginas;
+        }
+    }
+}
+
+<ul class="pagination">
+    <li>@Html.ActionLink("Primera", null, new { pagina = 1 })</li>
+    @for (int i = inicial; i <= final; i++)
+    {
+        if(i == Model.PaginaActual)
+        {
+            <li class="active">@Html.ActionLink(i.ToString(), null, new { pagina = i })</li>
+        }
+        else
+        {
+            <li class ="page-item">@Html.ActionLink(i.ToString(), null, new { pagina = i })</li>
+        }
+    }
+    <li>@Html.ActionLink("Ultima", null, new { pagina = cantidadPaginas })</li>
+    <a class="btn btn-primary" href="">Hola</a>
+</ul>
+-->
+

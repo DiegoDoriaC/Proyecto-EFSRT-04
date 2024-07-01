@@ -56,7 +56,7 @@ namespace LibreriasReto.BLL.Servicios
                 {
                     DateTime fecha_Inicio = Convert.ToDateTime(fechaInicio, new CultureInfo("es-PE"));
                     DateTime fecha_Fin = Convert.ToDateTime(fechaFin, new CultureInfo("es-PE"));
-                    filtroClientes = filtroClientes.Where(recepcion => recepcion.FechaIngreso > fecha_Inicio && recepcion.FechaIngreso < fecha_Fin).ToList();
+                    filtroClientes = filtroClientes.Where(recepcion => recepcion.FechaIngreso >= fecha_Inicio && recepcion.FechaIngreso <= fecha_Fin).ToList();
                 }
                 listaClientes = _mapper.Map<List<RecepcionDTO>>(filtroClientes);
             }

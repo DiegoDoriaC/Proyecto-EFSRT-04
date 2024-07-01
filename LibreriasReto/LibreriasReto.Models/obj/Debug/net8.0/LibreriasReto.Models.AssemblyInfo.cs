@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibreriasReto.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf396082248489edc8f15e0c811dca3831b9a9f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6474ea1b934b307bd6e36a49513296aa09e429d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibreriasReto.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibreriasReto.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

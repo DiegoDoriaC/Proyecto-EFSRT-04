@@ -1,12 +1,13 @@
 ﻿using LibreriasReto.BLL.Servicios.Contrato;
 using Microsoft.AspNetCore.Mvc;
 using LibreriasReto.DTO;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization;
 
 namespace LibreriasReto.Controllers
 {
     [Authorize]
+    [Authorize(Roles = "Administrador")]
     public class AreaController : Controller
     {
 

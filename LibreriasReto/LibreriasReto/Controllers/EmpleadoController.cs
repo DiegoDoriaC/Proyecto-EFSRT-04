@@ -4,12 +4,12 @@ using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-
 using Microsoft.AspNetCore.Authorization;
 
 namespace LibreriasReto.Controllers
 {
     [Authorize]
+    [Authorize(Roles = "Administrador")]
     public class EmpleadoController : Controller
     {
         private readonly IEmpleadoService _servicio;

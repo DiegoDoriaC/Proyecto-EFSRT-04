@@ -2,12 +2,13 @@
 using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authorization;
 
 namespace LibreriasReto.Controllers
 {
     [Authorize]
+    [Authorize(Roles = "Administrador")]
     public class RecepcionController : Controller
     {
         private readonly IRecepcionService _servicio;
@@ -58,8 +59,8 @@ namespace LibreriasReto.Controllers
                 ViewBag.MENSAJE = "Ningun registro encontrado...";
                 return View(listaRecepciones);
             }
-            ViewBag.ReporteSemanal = listaRecepciones.Where(l => Convert.ToDateTime(l.FechaIngreso) > DateTime.Now.AddDays(-7)).Count();
-            ViewBag.ReporteMensual = listaRecepciones.Where(l => Convert.ToDateTime(l.FechaIngreso) > DateTime.Now.AddMonths(-1)).Count();
+            ViewBag.ReporteSemanal = listaRecepciones.Where(l => Convert.ToDateTime(l.FechaIngreso) >= DateTime.Now.AddDays(-7)).Count();
+            ViewBag.ReporteMensual = listaRecepciones.Where(l => Convert.ToDateTime(l.FechaIngreso) >= DateTime.Now.AddMonths(-1)).Count();
             ViewBag.ReporteTotal = listaRecepciones.ToList().Count();
             return View(listaRecepciones);
         }

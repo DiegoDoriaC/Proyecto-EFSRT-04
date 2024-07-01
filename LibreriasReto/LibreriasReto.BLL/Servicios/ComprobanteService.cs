@@ -35,15 +35,17 @@ namespace LibreriasReto.BLL.Servicios
             {
                 if(filtro != null)
                 {
-                    listaComprobante = _mapper.Map<List<ComprobanteDTO>>(await _context.Set<Comprobante>().Where(filtro).ToListAsync());
+                    List<Comprobante>listaComprobanteSinMappear = await _context.Set<Comprobante>().Where(filtro).Include(u => u.IdMetodoPagoNavigation).Include(u => u.IdClienteNavigation).Include(u => u.IdEmpleadoNavigation).Include(u => u.Venta).ThenInclude(v => v.IdlibroNavigation).ToListAsync();
+                    listaComprobante = _mapper.Map<List<ComprobanteDTO>>(listaComprobanteSinMappear);
+                    return listaComprobante;
                 }
             }
             catch
             {
-                throw;            
+                throw;
             }
 
-            return listaComprobante = _mapper.Map<List<ComprobanteDTO>>(await _context.Comprobantes.ToListAsync());
+            return listaComprobante = _mapper.Map<List<ComprobanteDTO>>(await _context.Set<Comprobante>().Include(u => u.IdMetodoPagoNavigation).Include(u => u.IdClienteNavigation).Include(u => u.IdEmpleadoNavigation).Include(u => u.Venta).ThenInclude(v => v.IdlibroNavigation).ToListAsync());
 
         }
 
@@ -53,8 +55,7 @@ namespace LibreriasReto.BLL.Servicios
             try
             {
                 Comprobante comprobanteMappeado = _mapper.Map<Comprobante>(comprobante);
-                await _ventaRepository.RealizarVenta(comprobanteMappeado);
-                respuesta = true;
+                respuesta = await _ventaRepository.RealizarVenta(comprobanteMappeado);                
             }
             catch
             {

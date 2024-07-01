@@ -27,7 +27,6 @@ namespace LibreriasReto.Controllers
         {
             ViewBag.Clientes = await _clienteServices.Listar();
             ViewBag.Libros = await _libroService.Listar();
-            //ViewBag.Libros = new SelectList(await _libroService.Listar(), "IdLibro", "Nombre");
             ViewBag.MetodoPago = new SelectList(await _metodoPagoService.listar(), "IdMetodoPago", "Nombre");
             return View(new ComprobanteDTO());
         }
@@ -36,10 +35,29 @@ namespace LibreriasReto.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ComprobanteDTO comprobante)
         {
-            ViewBag.RegistrarVenta = null;
             bool response = await _comprobanteServices.Registrar(comprobante);
-            ViewBag.RegistrarVenta = response == true ? "Venta registrada satisfactoriamente" : "No se pudo registrar la venta";
-            return RedirectToAction(nameof(Create));
+            var result = new
+            {
+                success = response,
+                message = response ? "Venta registrada satisfactoriamente" : "No se pudo registrar la venta, compruebe el stock"
+            };
+            return Json(result);          
         }
+
+        [HttpGet]
+        public IActionResult Reportes()
+        {
+            return View(new List<ComprobanteDTO>());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Reportes(int pagina = 1, string empleado = null)
+        {
+            List<ComprobanteDTO> listadoVentas = null;            
+            if(empleado != null) listadoVentas = await _comprobanteServices.Listar(u => u.IdEmpleadoNavigation.Nombre.Contains(empleado));
+          
+            return View(listadoVentas);
+        }
+
     }
 }

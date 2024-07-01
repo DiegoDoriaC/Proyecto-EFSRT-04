@@ -33,7 +33,7 @@ namespace LibreriasReto.DAL.Repositorio
                         var libroEncontrado = _dbContext.Set<Libro>().FirstOrDefault(u => u.IdLibro == item.Idlibro);
                         if(libroEncontrado.Stock < item.Cantidad)
                         {
-                            return false;
+                            return respuesta = false;
                         }
                         libroEncontrado.Stock -= item.Cantidad;
                         _dbContext.Set<Libro>().Update(libroEncontrado);     
@@ -42,7 +42,6 @@ namespace LibreriasReto.DAL.Repositorio
                         importeTotal += item.Total;
                     }
                     await _dbContext.SaveChangesAsync();
-                    //comprobante.IdComprobante = 7000;
                     comprobante.Total = importeTotal;
                     comprobante.FechaVenta = null;
                     await _dbContext.Set<Comprobante>().AddAsync(comprobante);

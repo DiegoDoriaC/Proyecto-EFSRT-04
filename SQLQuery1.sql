@@ -122,7 +122,7 @@ insert into area values
 	('Limpieza', 1200),
 	('Vendedor', 2200),
 	('Almacenero', 1500),
-	('Seguridad', 1700)
+	('Administrador', 4800)
 go
 
 insert into genero values
@@ -162,7 +162,8 @@ go
 
 insert into empleado values
 	(1, '16130376', 'Diego', 'nahui Rodriguez', '924221252', '13-02-2024', 'Diegon@gamil.com', 'Barrios Altos', 1),
-	(2, '16130376', 'Edwin', 'Castillo Reto', '974201252', '13-02-2024', 'EdwinC@gamil.com', 'AA.HH Vecino cuida mi calamina', 1)
+	(2, '12345678', 'Edwin', 'Castillo Reto', '974201252', '13-02-2024', 'EdwinC@gamil.com', 'AA.HH Vecino cuida mi calamina', 1),
+	(4, '74365910', 'Luis', 'Zambrano Garcia', '974201252', '13-02-2024', 'EdwinC@gamil.com', 'AA.HH Vecino cuida mi calamina', 1)
 go
 
 insert into libro values
@@ -180,7 +181,8 @@ insert into libro values
 go
 
 insert into acceso values
-	(2001, '12345678', '32207a220eed3e0e041190bb17e623c6c38f8ab4d65986084d5bd473a7a8b0d2')
+	(2001, '12345678', '32207a220eed3e0e041190bb17e623c6c38f8ab4d65986084d5bd473a7a8b0d2'),
+	(2002, '74365910', '83c0483cc1adf4d0a6fd4f8974f6d809a6fb427a5b8b1a5facee2cf854c5dbdb')
 go
 
 

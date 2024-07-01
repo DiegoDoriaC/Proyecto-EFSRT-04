@@ -4,66 +4,75 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Realizar Venta</h1>
 
-<h4>ComprobanteDTO</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" method="post">
+<div class="row" style="position:relative">
+    <div class="col-md-5">
+        <form id="createForm" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label class="form-label">Codigo CLiente
-                <input  list="clientes" name="IdCliente" />
-                </label>
-                <datalist name="IdCliente" id="clientes">
+            <div class="form-group mb-3">
+                <label class="">Codigo Cliente</label>
+                <input style="width:100%" list="clientes" name="IdCliente" class="form-control" id="inputCliente" />                
+                <datalist name="IdCliente" id="clientes" >
                     @foreach (var cliente in ViewBag.Clientes)
                     {
-                        <option value="@cliente.IdCliente">@cliente.Nombre</option>
+                        <option value="@cliente.IdCliente" >@cliente.Nombre</option>
                     }
                 </datalist>
                 <span asp-validation-for="IdCliente" class="text-danger"></span>
             </div>
             <input asp-for="IdEmpleado" class="form-control" hidden value="@int.Parse(User.Claims.FirstOrDefault(c => c.Type == "idEmpleado").Value)" />
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="IdMetodoPago">Metodo de Pago</label>
-                <select asp-for="IdMetodoPago" asp-items="@ViewBag.MetodoPago" class="form-select"></select>
+                <select asp-for="IdMetodoPago" asp-items="@ViewBag.MetodoPago" id="metodoPagoInput" class="form-select"></select>
+                <span asp-validation-for="IdMetodoPago" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label>Libro</label>
-                <select id="LibroSelect" class="form-select">
+            <div class="form-group mb-3">
+                <label class="">Codigo Libro</label>
+                <input style="width:100%" list="libros" id="LibroInput" name="LibroInput" class="form-control"/>
+                <datalist id="libros">
                     @foreach (var libro in ViewBag.Libros)
                     {
-                        <option value="@libro.IdLibro">@libro.Nombre</option>
+                        <option value="@libro.IdLibro" data-id="@libro.IdLibro" data-price="@libro.Precio" data-nombre="@libro.Nombre">@libro.Nombre</option>
                     }
-                </select>
+                </datalist>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label>Cantidad</label>
                 <input id="Cantidad" type="number" class="form-control" />
             </div>
-            <div class="form-group">
-                <button type="button" id="addVenta" class="btn btn-primary">Add Venta</button>
+            <div style="display:flex; width:100%; justify-content:space-between" class="form-group mt-3 mb-3">
+                <div>
+                    <button type="button" id="addVenta" class="btn btn-primary">Añadir a la Lista</button>                    
+                    <button style="margin-right:-15px;transform: scale(1.1); position:absolute; right:15px; bottom:0" type="submit" class="btn btn-success">Vender</button>
+                </div>
+                <button style="" onclick="limpiarDatos()" type="submit" id="submitButton" class="btn btn-danger">Limpiar</button>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-            <!-- Campos ocultos para enviar los datos de las ventas -->
             <div id="ventasContainer"></div>
         </form>
     </div>
-    <div>
+    <div style="height:290px; overflow-y:scroll;">
         <table class="table">
             <thead>
                 <tr>
+                    <th>Codigo</th>
                     <th>Libro</th>
+                    <th>Precio Unitario</th>
                     <th>Cantidad</th>
+                    <th>Precio Total</th>
                 </tr>
             </thead>
             <tbody id="TablaVenta">
             </tbody>
         </table>
     </div>
+<div style="display:flex; align-items:center; width:100%; gap:10px; justify-content:space-between">
+    <div style="display:flex; align-items:center;">
+        <h4>Importe Total: </h4>
+        <p class="ms-2" style="margin-top:10px; font-weight:600; font-size:20px" id="ImporteTotal">0</p>
+    </div>
+</div>
 </div>
 
 @section Scripts {
@@ -71,29 +80,92 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         document.getElementById('addVenta').addEventListener('click', function () {
             var cantidad = document.getElementById('Cantidad').value;
-            var libroSelect = document.getElementById('LibroSelect');
-            var selectedLibro = libroSelect.options[libroSelect.selectedIndex];
-            var libroId = selectedLibro.value;
-            var libroNombre = selectedLibro.text;
+            var libroInput = document.getElementById('LibroInput');
+            var libroNombre = libroInput.value;
 
-            var rowCount = document.getElementById('TablaVenta').rows.length;
+            document.getElementById('inputCliente').setAttribute('readonly', 'readonly');            
 
-            var row = document.createElement('tr');
-            row.innerHTML = '<td>' + libroNombre + '</td>' +
-                '<td>' + cantidad + '</td>';
+            var libroOption = Array.from(document.querySelectorAll('#libros option')).find(option => option.value === libroNombre);
 
-            document.getElementById('TablaVenta').appendChild(row);
+            if (libroOption) {
+                var libroId = libroOption.getAttribute('data-id');
+                var libroPrecio = libroOption.getAttribute('data-price');
+                var libroNombre = libroOption.getAttribute('data-nombre');
+                var subtotal = libroPrecio * cantidad;
 
-            // Añadir campos ocultos para enviar los datos de las ventas
-            var ventasContainer = document.getElementById('ventasContainer');
+                var rowCount = document.getElementById('TablaVenta').rows.length;
 
-            var ventaFields = '<input type="" name="Venta[' + rowCount + '].Idlibro" value="' + libroId + '" />' +
-                '<input type="" name="Venta[' + rowCount + '].nombreLibro" value="' + libroNombre + '" />' +
-                '<input type="" name="Venta[' + rowCount + '].Cantidad" value="' + cantidad + '" />';
-            ventasContainer.innerHTML += ventaFields;
+                var row = document.createElement('tr');
+                row.innerHTML = '<td>' + libroId + '</td>' +
+                    '<td>' + libroNombre + '</td>' +
+                    '<td>' + libroPrecio + '</td>' +
+                    '<td class="cantidadLibros">' + cantidad + '</td>' +
+                    '<td class="subtotal">' + subtotal + '</td>';
+
+                document.getElementById('TablaVenta').appendChild(row);
+
+                var ventasContainer = document.getElementById('ventasContainer');
+
+                var ventaFields = '<input type="hidden" name="Venta[' + rowCount + '].Idlibro" value="' + libroId + '" />' +
+                    '<input type="hidden" name="Venta[' + rowCount + '].Cantidad" value="' + cantidad + '" />' +
+                    '<input type="hidden" name="Venta[' + rowCount + '].Subtotal" value="' + subtotal + '" />';
+                ventasContainer.innerHTML += ventaFields;
+                sumarTotal();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Por favor selecciona un libro válido.'
+                });
+            }
+            document.getElementById('Cantidad').value=""
+            document.getElementById('LibroInput').value=""
         });
+
+        
+
+        document.getElementById('createForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var form = document.getElementById('createForm');
+            var formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    Swal.fire({
+                        icon: data.success ? 'success' : 'error',
+                        title: data.success ? 'Venta registrada' : 'Error',
+                        text: data.message
+                    });
+                })
+            //limpiarDatos()
+            });
+
+        
+
+        function limpiarDatos() {
+            document.getElementById('createForm').reset();
+            document.getElementById('TablaVenta').innerHTML = '';
+            document.getElementById('ventasContainer').innerHTML = '';
+            document.getElementById('ImporteTotal').innerText = '0';
+            document.getElementById('inputCliente').removeAttribute('readonly');
+        }
+
+        function sumarTotal() {
+            var sumaTotal = 0;
+            const tdElements = document.querySelectorAll('.subtotal');
+            const subtotals = Array.from(tdElements).map(td => Number(td.textContent));
+
+            subtotals.forEach(subtotal => sumaTotal += subtotal);
+
+            var inputImpoteTotal = document.getElementById("ImporteTotal");
+            inputImpoteTotal.textContent = "S/. " + sumaTotal;
+        }
     </script>
 }
