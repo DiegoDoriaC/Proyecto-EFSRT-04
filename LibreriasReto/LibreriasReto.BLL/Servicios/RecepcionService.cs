@@ -49,7 +49,7 @@ namespace LibreriasReto.BLL.Servicios
             List<RecepcionDTO> listaClientes;
             try
             {
-                var clientesEncontrados = await _dbcontext.Set<Recepcion>().Include(recepcion => recepcion.IdLibroNavigation).ToListAsync();
+                var clientesEncontrados = await _dbcontext.Set<Recepcion>().Include(recepcion => recepcion.IdLibroNavigation).OrderByDescending(x => x.FechaIngreso).ToListAsync();
                 var filtroClientes = clientesEncontrados.ToList();
                 if(nombre.Trim() != "") filtroClientes = clientesEncontrados.Where(recepcion => recepcion.IdLibroNavigation.Nombre.ToLower().Contains(nombre.ToLower())).ToList();
                 if (fechaInicio.Trim() != "" && fechaFin.Trim() != "") 

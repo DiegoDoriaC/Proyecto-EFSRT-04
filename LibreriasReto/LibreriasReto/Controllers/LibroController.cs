@@ -1,12 +1,10 @@
 ﻿using ClosedXML.Excel;
-using System.Data;
 using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Authorization;
-
-using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace LibreriasReto.Controllers
 {
@@ -26,10 +24,9 @@ namespace LibreriasReto.Controllers
         [HttpGet]
         public async Task<IActionResult> Lista(int pagina = 1)
         {
-            //var idEmpleado = User.Claims.FirstOrDefault(c => c.Type == "idEmpleado");
             var libros = await _servicio.Listar();
             int cantidadRegistrosPorPagina = 10;
-            var librosParaLaPaginacion = libros.Skip((pagina -1) * cantidadRegistrosPorPagina).Take(cantidadRegistrosPorPagina).ToList();
+            var librosParaLaPaginacion = libros.Skip((pagina - 1) * cantidadRegistrosPorPagina).Take(cantidadRegistrosPorPagina).ToList();
             var totalDeRegistros = libros.Count();
             //CODIGO PARA LA PAGINACION            
             var modelo = new PaginacionModelo<LibroDTO>();

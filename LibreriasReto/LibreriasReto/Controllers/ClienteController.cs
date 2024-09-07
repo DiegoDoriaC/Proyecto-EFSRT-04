@@ -1,11 +1,9 @@
 ﻿using ClosedXML.Excel;
-using System.Data;
 using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
-using Microsoft.AspNetCore.Mvc;
-
 using Microsoft.AspNetCore.Authorization;
-using LibreriasReto.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace LibreriasReto.Controllers
 {
@@ -28,6 +26,7 @@ namespace LibreriasReto.Controllers
             int cantidadRegistrosPorPagina = 10;
             var librosParaLaPaginacion = listado.Skip((pagina - 1) * cantidadRegistrosPorPagina).Take(cantidadRegistrosPorPagina).ToList();
             var totalDeRegistros = listado.Count();
+
             //CODIGO PARA LA PAGINACION            
             var modelo = new PaginacionModelo<ClienteDTO>();
             modelo.listaGenerica = librosParaLaPaginacion;
@@ -79,7 +78,7 @@ namespace LibreriasReto.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(ClienteDTO cliente)
         {
-            bool respuesta =  await _servicio.Actualizar(cliente);
+            bool respuesta = await _servicio.Actualizar(cliente);
             return RedirectToAction("lista");
         }
 

@@ -2,7 +2,6 @@
 using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 
 namespace LibreriasReto.Controllers
 {

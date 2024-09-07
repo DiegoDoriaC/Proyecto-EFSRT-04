@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LibreriasReto.BLL.Servicios;
+﻿using LibreriasReto.BLL.Servicios;
 using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DAL.DBContext;
 using LibreriasReto.DAL.Repositorio;
@@ -24,8 +19,6 @@ namespace LibreriasReto.IOC
                 options.UseSqlServer(configuration.GetConnectionString("cadenaSQL"))
             );
 
-            //Mapper
-
             //Crud Repositorio
             services.AddScoped<IRecepcionRepository, RecepcionRepository>();
             services.AddScoped<IVentaRepository, VentaRepository>();
@@ -42,8 +35,8 @@ namespace LibreriasReto.IOC
             services.AddScoped<IAreaService, AreaService>();
             services.AddScoped<IComprobanteServices, ComprobanteService>();
             services.AddScoped<IMetodoPagoService, MetodoPagoService>();
+            services.AddScoped<IVentaService, VentaService>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
-            //services.AddScoped<IVentaService, VentaService>();
 
         }
 

@@ -13,8 +13,10 @@ namespace LibreriasReto.DTO
         [Required(ErrorMessage = "El cliente es requerido")]
         public int IdCliente { get; set; }
         public string? nombreCliente { get; set; }
+        public string? apellidoCliente { get; set; }
         public int IdEmpleado { get; set; }
         public string? nombreEmpleado { get; set; }
+        public string? apellidoEmpleado { get; set; }
         [Required(ErrorMessage = "El metodo de pago es requerido")]
         public int IdMetodoPago { get; set; }
         public string? nombreMetodoPago { get; set; }

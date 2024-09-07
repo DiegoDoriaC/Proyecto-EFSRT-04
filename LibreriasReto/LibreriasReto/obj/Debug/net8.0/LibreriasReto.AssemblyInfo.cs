@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibreriasReto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6474ea1b934b307bd6e36a49513296aa09e429d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b47be110e77aff19c703c49858a845bfc96c1d63")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibreriasReto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibreriasReto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

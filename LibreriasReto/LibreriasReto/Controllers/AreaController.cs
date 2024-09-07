@@ -1,8 +1,7 @@
 ﻿using LibreriasReto.BLL.Servicios.Contrato;
-using Microsoft.AspNetCore.Mvc;
 using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LibreriasReto.Controllers
 {
@@ -21,7 +20,7 @@ namespace LibreriasReto.Controllers
         [HttpGet]
         public async Task<IActionResult> Lista()
         {
-            return View(await _service.Listar() );
+            return View(await _service.Listar());
         }
 
         [HttpGet]

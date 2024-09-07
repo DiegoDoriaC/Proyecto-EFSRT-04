@@ -1,4 +1,4 @@
-﻿@model List<LibreriasReto.DTO.RecepcionDTO>;
+﻿@model LibreriasReto.DTO.PaginacionModelo<LibreriasReto.DTO.RecepcionDTO>;
 
 <h2 class="mb-3">Mantenimiento Recepciones</h2>
 <div style="display: flex">
@@ -11,64 +11,36 @@
         <span class="material-symbols-outlined">history_toggle_off</span>
     </a>
 </div>
-@if(ViewBag.MENSAJE != null){
 
-    <table class="table table-bordered table-striped">
-        <thead>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Libro</th>
+            <th>Cantidad</th>
+            <th>FechaIngreso</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listaGenerica)
+        {
             <tr>
-                <th>ID</th>
-                <th>Libro</th>
-                <th>Cantidad</th>
-                <th>FechaIngreso</th>
-                <th style="text-align: center" colspan="2">Acciones</th>
+                <td>@item.nombreLibro</td>
+                <td>@item.Cantidad</td>
+                <td>@item.FechaIngreso</td>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td colspan="6" style="text-align:center"><h3>@ViewBag.MENSAJE</h3></td>
-            </tr>
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
 
-    <div class="reporte my-4">
-        <h5>Ingresos registrados la última semana: <strong>@ViewBag.ReporteSemanal</strong></h5>
-        <h5>Ingresos registrados el último mes: <strong>@ViewBag.ReporteMensual</strong></h5>
-        <h5>Ingresos totales registrados: <strong>@ViewBag.ReporteTotal</strong></h5>
-    </div>
-
-}
-else
-{
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Libro</th>
-                <th>Cantidad</th>
-                <th>FechaIngreso</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.IdRecepcion</td>
-                    <td>@item.nombreLibro</td>
-                    <td>@item.Cantidad</td>
-                    <td>@item.FechaIngreso</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
-    <div class="reporte my-4" style="color:#232323">
-        <h5>Ingresos registrados la última semana: <strong>@ViewBag.ReporteSemanal</strong></h5>
-        <h5>Ingresos registrados el último mes: <strong>@ViewBag.ReporteMensual</strong></h5>
-        <h5>Ingresos totales registrados: <strong>@ViewBag.ReporteTotal</strong></h5>
-    </div>
+<div class="reporte my-4" style="color:#232323">
+    <h5>Ingresos registrados la última semana: <strong>@ViewBag.ReporteSemanal</strong></h5>
+    <h5>Ingresos registrados el último mes: <strong>@ViewBag.ReporteMensual</strong></h5>
+    <h5>Ingresos totales registrados: <strong>@ViewBag.ReporteTotal</strong></h5>
+</div>
     
+@{
+    Html.RenderPartial("_paginacion", Model);
 }
-
 
 <style>
     .enlace {

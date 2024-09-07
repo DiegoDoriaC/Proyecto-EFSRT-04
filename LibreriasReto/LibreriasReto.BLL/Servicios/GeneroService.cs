@@ -48,7 +48,7 @@ namespace LibreriasReto.BLL.Servicios
             List<GeneroDTO> listaGeneros;
             try
             {
-                var generos = await _dbcontext.Set<Genero>().ToListAsync();
+                var generos = await _dbcontext.Set<Genero>().OrderBy(x => x.Nombre).ToListAsync();
                 if (generos.Count == 0) throw new TaskCanceledException("Ningun Genero encontrado");
                 listaGeneros = _mapper.Map<List<GeneroDTO>>(generos);
             }

@@ -9,8 +9,6 @@ namespace LibreriasReto.BLL.Servicios.Contrato
 {
     public interface IVentaService
     {
-        Task<List<VentaDTO>> Listar();
-        Task<VentaDTO> Buscar(int id);
-        Task<bool> Registrar(VentaDTO venta);
+        Task<List<VentaDTO>> Listar(int id);
     }
 }

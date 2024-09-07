@@ -1,0 +1,182 @@
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\appsettings.Development.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\appsettings.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.staticwebassets.runtime.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.exe
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.deps.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.runtimeconfig.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\AutoMapper.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Azure.Core.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Azure.Identity.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\ClosedXML.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\ExcelNumberFormat.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Irony.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Identity.Client.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\SixLabors.Fonts.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Drawing.Common.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.IO.Packaging.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Memory.Data.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Runtime.Caching.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Security.Permissions.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Windows.Extensions.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\XLParser.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.BLL.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DAL.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DTO.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.IOC.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Utilidades.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.BLL.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DTO.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.IOC.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DAL.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Models.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Utilidades.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.csproj.AssemblyReference.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.AssemblyInfoInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.AssemblyInfo.cs
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.csproj.CoreCompileInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.RazorAssemblyInfo.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.RazorAssemblyInfo.cs
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.sourcelink.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.LibreriasReto.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.build.LibreriasReto.props
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.LibreriasReto.props
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.LibreriasReto.props
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets.pack.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\scopedcss\bundle\LibreriasReto.styles.css
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\scopedcss\projectbundle\LibreriasReto.bundle.scp.css
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\Libreria.659DEE68.Up2Date
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\refint\LibreriasReto.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.genruntimeconfig.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\ref\LibreriasReto.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\appsettings.Development.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\appsettings.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.staticwebassets.runtime.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.exe
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.deps.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.runtimeconfig.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\AutoMapper.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Azure.Core.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Azure.Identity.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\ClosedXML.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\ExcelNumberFormat.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Irony.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Identity.Client.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\SixLabors.Fonts.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Drawing.Common.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.IO.Packaging.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Memory.Data.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Runtime.Caching.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Security.Permissions.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\System.Windows.Extensions.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\XLParser.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.BLL.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DAL.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DTO.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.IOC.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Utilidades.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.BLL.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DTO.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.IOC.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.DAL.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Models.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\bin\Release\net8.0\LibreriasReto.Utilidades.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.csproj.AssemblyReference.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.AssemblyInfoInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.AssemblyInfo.cs
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.csproj.CoreCompileInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.RazorAssemblyInfo.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.RazorAssemblyInfo.cs
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.sourcelink.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.LibreriasReto.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.build.LibreriasReto.props
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.LibreriasReto.props
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.LibreriasReto.props
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\staticwebassets.pack.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\scopedcss\bundle\LibreriasReto.styles.css
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\scopedcss\projectbundle\LibreriasReto.bundle.scp.css
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\Libreria.659DEE68.Up2Date
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\refint\LibreriasReto.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\LibreriasReto.genruntimeconfig.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto\obj\Release\net8.0\ref\LibreriasReto.dll

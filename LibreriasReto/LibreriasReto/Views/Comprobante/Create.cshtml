@@ -17,7 +17,7 @@
                 <datalist name="IdCliente" id="clientes" >
                     @foreach (var cliente in ViewBag.Clientes)
                     {
-                        <option value="@cliente.IdCliente" >@cliente.Nombre</option>
+                        <option value="@cliente.IdCliente" >@(cliente.Nombre + " " + cliente.Apellido)</option>
                     }
                 </datalist>
                 <span asp-validation-for="IdCliente" class="text-danger"></span>
@@ -87,7 +87,7 @@
             var libroInput = document.getElementById('LibroInput');
             var libroNombre = libroInput.value;
 
-            document.getElementById('inputCliente').setAttribute('readonly', 'readonly');            
+            //document.getElementById('inputCliente').setAttribute('readonly', 'readonly');            
 
             var libroOption = Array.from(document.querySelectorAll('#libros option')).find(option => option.value === libroNombre);
 
@@ -144,7 +144,7 @@
                         text: data.message
                     });
                 })
-            //limpiarDatos()
+            limpiarDatos()
             });
 
         

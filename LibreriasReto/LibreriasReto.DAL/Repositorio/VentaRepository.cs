@@ -30,11 +30,8 @@ namespace LibreriasReto.DAL.Repositorio
                     decimal? importeTotal = 0;
                     foreach (Venta item in comprobante.Venta)
                     {
-                        var libroEncontrado = _dbContext.Set<Libro>().FirstOrDefault(u => u.IdLibro == item.Idlibro);
-                        if(libroEncontrado.Stock < item.Cantidad)
-                        {
-                            return respuesta = false;
-                        }
+                        var libroEncontrado = _dbContext.Set<Libro>().FirstOrDefault(u => u.IdLibro == item.Idlibro)!;
+                        if(libroEncontrado.Stock < item.Cantidad || item.Cantidad <= 0) return respuesta = false; 
                         libroEncontrado.Stock -= item.Cantidad;
                         _dbContext.Set<Libro>().Update(libroEncontrado);     
                         item.Precio = libroEncontrado.Precio;

@@ -39,8 +39,8 @@ namespace LibreriasReto.DAL.Repositorio
                     libroEncontrado.Stock += recepcion.Cantidad;
                     var libroModificado = _dbContext.Set<Libro>().Update(libroEncontrado);
                     var registro = await _dbContext.Set<Recepcion>().AddAsync(recepcionMappeado);
-                    estado = true;
                     await _dbContext.SaveChangesAsync();
+                    estado = true;
                     transaction.Commit();
                 }
                 catch

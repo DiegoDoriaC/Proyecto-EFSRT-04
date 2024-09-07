@@ -49,7 +49,7 @@ namespace LibreriasReto.BLL.Servicios
             List<AreaDTO> listaAreas;
             try
             {
-                var areas = await _dbcontext.Set<Area>().ToListAsync();
+                var areas = await _dbcontext.Set<Area>().OrderBy(x => x.Cargo).ToListAsync();
                 if (areas.Count == 0) throw new TaskCanceledException("Ninguna area encontrada");
                 listaAreas = _mapper.Map<List<AreaDTO>>(areas);
             }

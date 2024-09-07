@@ -84,7 +84,7 @@ namespace LibreriasReto.BLL.Servicios
             List<EmpleadoDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Empleado>().Where(estado => estado.EsActivo == true).Include(c => c.IdAreaNavigation).ToListAsync();
+                var clientes = await _dbcontext.Set<Empleado>().Where(estado => estado.EsActivo == true).Include(c => c.IdAreaNavigation).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<EmpleadoDTO>>(clientes);
             }
             catch
@@ -99,7 +99,7 @@ namespace LibreriasReto.BLL.Servicios
             List<EmpleadoDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Empleado>().Include(empleado => empleado.IdAreaNavigation).ToListAsync();
+                var clientes = await _dbcontext.Set<Empleado>().Include(empleado => empleado.IdAreaNavigation).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<EmpleadoDTO>>(clientes);
             }
             catch
@@ -114,7 +114,7 @@ namespace LibreriasReto.BLL.Servicios
             List<EmpleadoDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Empleado>().Where(e => e.EsActivo == false).Include(empleado => empleado.IdAreaNavigation).ToListAsync();
+                var clientes = await _dbcontext.Set<Empleado>().Where(e => e.EsActivo == false).Include(empleado => empleado.IdAreaNavigation).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<EmpleadoDTO>>(clientes);
             }
             catch

@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+@model LibreriasReto.DTO.DetalleVentaViewModel
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Comprobante</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Id Comprobante
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comprobante.IdComprobante)
+        </dd>
+        <dt class = "col-sm-2">
+            Código Cliente
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comprobante.IdCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            Nombre Cliente
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comprobante.nombreCliente) @Html.DisplayFor(model => model.Comprobante.apellidoCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            Código Empleado
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comprobante.IdEmpleado)
+        </dd>
+        <dt class = "col-sm-2">
+            Nombre Empleado
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Comprobante.nombreEmpleado) @Html.DisplayFor(model => model.Comprobante.apellidoEmpleado)
+        </dd>
+        <dt class = "col-sm-2">
+            Metodo de Pago
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comprobante.nombreMetodoPago)
+        </dd>
+        <dt class = "col-sm-2">
+            Monto Total
+        </dt>
+        <dd class = "col-sm-10">
+            <strong>@string.Format("{0:C2}", Model.Comprobante.Total)</strong>
+        </dd>
+        <dt class = "col-sm-2">
+            Fecha de Venta
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comprobante.FechaVenta)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <h3>Detalle de la Venta</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre Libro</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Venta)
+            {
+                <tr>
+                    <td>@item.nombreLibro</td>
+                    <td>@item.Cantidad</td>
+                    <td>@item.Precio</td>
+                    <td>@item.Total</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+</div>
+
+
+<div>
+    <a class="btn btn-outline-primary" asp-action="Reportes">Volver</a>
+</div>
+
+<script>
+
+</script>

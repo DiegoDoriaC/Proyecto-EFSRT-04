@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj": {}
+    "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj": {
+    "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj",
         "projectName": "LibreriasReto.DTO",
-        "projectPath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj",
-        "packagesPath": "C:\\Users\\Diego D\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\obj\\",
+        "projectPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Diego D\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

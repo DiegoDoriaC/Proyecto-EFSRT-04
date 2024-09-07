@@ -84,7 +84,9 @@ namespace LibreriasReto.Utilidades
             #region Comprobante
             CreateMap<Comprobante, ComprobanteDTO>()
                 .ForMember(d => d.nombreCliente, op => op.MapFrom(or => or.IdClienteNavigation.Nombre))
+                .ForMember(d => d.apellidoCliente, op => op.MapFrom(or => or.IdClienteNavigation.Apellido))
                 .ForMember(d => d.nombreEmpleado, op => op.MapFrom(or => or.IdEmpleadoNavigation.Nombre))
+                .ForMember(d => d.apellidoEmpleado, op => op.MapFrom(or => or.IdEmpleadoNavigation.Apellido))
                 .ForMember(d => d.nombreMetodoPago, op => op.MapFrom(or => or.IdMetodoPagoNavigation.Nombre))
                 .ForMember(d => d.FechaVenta, op => op.MapFrom(or => or.FechaVenta.Value.ToString("dd/MM/yyyy", new CultureInfo("es-PE"))));
             #endregion Comprobante

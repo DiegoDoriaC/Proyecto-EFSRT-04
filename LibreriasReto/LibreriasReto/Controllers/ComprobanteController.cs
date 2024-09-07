@@ -1,8 +1,8 @@
 ﻿using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
-using LibreriasReto.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Globalization;
 
 namespace LibreriasReto.Controllers
 {
@@ -12,13 +12,15 @@ namespace LibreriasReto.Controllers
         private readonly IComprobanteServices _comprobanteServices;
         private readonly IMetodoPagoService _metodoPagoService;
         private readonly ILibroService _libroService;
+        private readonly IVentaService _ventaService;
         private readonly IClienteServices _clienteServices;
 
-        public ComprobanteController(IComprobanteServices comprobanteServices, IClienteServices clienteServices, IMetodoPagoService metodoPagoService, ILibroService libroService)
+        public ComprobanteController(IComprobanteServices comprobanteServices, IClienteServices clienteServices, IMetodoPagoService metodoPagoService, IVentaService ventaService, ILibroService libroService)
         {
             _comprobanteServices = comprobanteServices;
             _clienteServices = clienteServices;
             _metodoPagoService = metodoPagoService;
+            _ventaService = ventaService;
             _libroService = libroService;
         }
 
@@ -41,7 +43,7 @@ namespace LibreriasReto.Controllers
                 success = response,
                 message = response ? "Venta registrada satisfactoriamente" : "No se pudo registrar la venta, compruebe el stock"
             };
-            return Json(result);          
+            return Json(result);
         }
 
         [HttpGet]
@@ -51,12 +53,32 @@ namespace LibreriasReto.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Reportes(int pagina = 1, string empleado = null)
+        public async Task<IActionResult> Reportes(string empleado = null, string fechaInicio = null, string fechaFin = null)
         {
-            List<ComprobanteDTO> listadoVentas = null;            
-            if(empleado != null) listadoVentas = await _comprobanteServices.Listar(u => u.IdEmpleadoNavigation.Nombre.Contains(empleado));
-          
+            List<ComprobanteDTO> listadoVentas = await _comprobanteServices.Listar();
+            if (empleado != null) listadoVentas = await _comprobanteServices.Listar(u => u.IdEmpleadoNavigation.Nombre.Contains(empleado));
+            if (fechaInicio != null && fechaFin != null)
+            {
+                listadoVentas = await _comprobanteServices.Listar();
+                if (empleado != null) listadoVentas = await _comprobanteServices.Listar(u => u.IdEmpleadoNavigation.Nombre.Contains(empleado));
+                DateTime _fechaInicio = Convert.ToDateTime(fechaInicio, new CultureInfo("es-PE"));
+                DateTime _fechaFin = Convert.ToDateTime(fechaFin, new CultureInfo("es-PE"));
+                listadoVentas = listadoVentas.Where(v => Convert.ToDateTime(v.FechaVenta) >= _fechaInicio && Convert.ToDateTime(v.FechaVenta) <= _fechaFin).ToList();
+            }
             return View(listadoVentas);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            ComprobanteDTO comprobanteEncontrado = await _comprobanteServices.Buscar(id);
+            List<VentaDTO> ventaEncontrada = await _ventaService.Listar(id);
+            DetalleVentaViewModel detalleVenta = new DetalleVentaViewModel
+            {
+                Comprobante = comprobanteEncontrado,
+                Venta = ventaEncontrada
+            };
+            return View(detalleVenta);
         }
 
     }

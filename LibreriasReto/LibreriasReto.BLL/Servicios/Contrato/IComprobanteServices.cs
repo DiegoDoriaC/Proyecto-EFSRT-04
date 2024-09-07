@@ -12,6 +12,7 @@ namespace LibreriasReto.BLL.Servicios.Contrato
     public interface IComprobanteServices
     {
         Task<List<ComprobanteDTO>> Listar(Expression<Func<Comprobante, bool>> filtro = null);
+        Task<ComprobanteDTO> Buscar(int id);
         Task<bool> Registrar(ComprobanteDTO comprobante);
     }
 }

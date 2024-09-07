@@ -1,10 +1,10 @@
 ﻿using ClosedXML.Excel;
-using System.Data;
 using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace LibreriasReto.Controllers
 {

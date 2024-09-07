@@ -86,7 +86,7 @@ namespace LibreriasReto.BLL.Servicios
             List<ClienteDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Cliente>().Where(estado => estado.EsActivo == true).ToListAsync();
+                var clientes = await _dbcontext.Set<Cliente>().Where(estado => estado.EsActivo == true).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<ClienteDTO>>(clientes);
             }
             catch
@@ -101,7 +101,7 @@ namespace LibreriasReto.BLL.Servicios
             List<ClienteDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Cliente>().Where(estado => estado.EsActivo == false).ToListAsync();
+                var clientes = await _dbcontext.Set<Cliente>().Where(estado => estado.EsActivo == false).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<ClienteDTO>>(clientes);
             }
             catch
@@ -116,7 +116,7 @@ namespace LibreriasReto.BLL.Servicios
             List<ClienteDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Cliente>().ToListAsync();
+                var clientes = await _dbcontext.Set<Cliente>().OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<ClienteDTO>>(clientes);
             }
             catch

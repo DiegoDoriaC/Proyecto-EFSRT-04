@@ -13,3 +13,33 @@ C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.Mod
 C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.pdb
 C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.genruntimeconfig.cache
 C:\Users\Diego D\Desktop\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\ref\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.deps.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.runtimeconfig.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.csproj.AssemblyReference.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.AssemblyInfoInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.AssemblyInfo.cs
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.csproj.CoreCompileInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.sourcelink.json
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\refint\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.pdb
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.genruntimeconfig.cache
+C:\Users\diego\OneDrive\Escritorio\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\ref\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.deps.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.runtimeconfig.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\bin\Debug\net8.0\LibreriasReto.Models.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.csproj.AssemblyReference.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.AssemblyInfoInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.AssemblyInfo.cs
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.csproj.CoreCompileInputs.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.sourcelink.json
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\refint\LibreriasReto.Models.dll
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.pdb
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\LibreriasReto.Models.genruntimeconfig.cache
+C:\Users\diego\OneDrive\Escritorio\Cursos\Cibertec\Ciclo 04\Proyectos\Experiencias Formativas\LibreriasReto\LibreriasReto.Models\obj\Debug\net8.0\ref\LibreriasReto.Models.dll

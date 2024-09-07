@@ -1,9 +1,9 @@
-﻿using System.Security.Claims;
-using LibreriasReto.BLL.Servicios.Contrato;
+﻿using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace LibreriasReto.Controllers
 {
@@ -36,7 +36,8 @@ namespace LibreriasReto.Controllers
             {
                 new Claim(ClaimTypes.Name, logueo.EmpleadoNombre),
                 new Claim(ClaimTypes.Role, logueo.EmpleadoRol),
-                new Claim("idEmpleado", logueo.IdEmpleado.ToString())
+                new Claim("idEmpleado", logueo.IdEmpleado.ToString()),
+                new Claim("rolEmpleado", logueo.EmpleadoRol)
             };
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));

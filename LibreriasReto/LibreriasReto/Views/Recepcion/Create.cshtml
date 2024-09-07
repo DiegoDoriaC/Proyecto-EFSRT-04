@@ -6,15 +6,16 @@
 @model LibreriasReto.DTO.RecepcionDTO;
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
-        <h2>Nuevo Libro</h2>
+        <h2>Nueva Recepción</h2>
         <form asp-controller="Recepcion" asp-action="Create" method="post">
             <div class="mb-3">
                 <label asp-for="IdLibro">Libro</label>
                 <select asp-for="IdLibro" asp-items="@ViewBag.LIBROS" class="form-select"></select>
+                <span asp-validation-for="IdLibro" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label>Cantidad</label>
-                <input class="form-control" asp-for="Cantidad" type="text" required />
+                <input class="form-control" asp-for="Cantidad" type="text" />
                 <span asp-validation-for="Cantidad" class="text-danger"></span>
             </div>
             <div class="mb-3">

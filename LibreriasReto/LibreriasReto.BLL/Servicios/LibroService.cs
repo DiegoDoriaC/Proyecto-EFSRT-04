@@ -89,7 +89,7 @@ namespace LibreriasReto.BLL.Servicios
             List<LibroDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == true).Include(i => i.IdGeneroNavigation).ToListAsync();
+                var clientes = await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == true).Include(i => i.IdGeneroNavigation).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<LibroDTO>>(clientes);
             }
             catch
@@ -104,7 +104,7 @@ namespace LibreriasReto.BLL.Servicios
             List<LibroDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Libro>().Include(libro => libro.IdGeneroNavigation).ToListAsync();
+                var clientes = await _dbcontext.Set<Libro>().Include(libro => libro.IdGeneroNavigation).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<LibroDTO>>(clientes);
             }
             catch
@@ -120,7 +120,7 @@ namespace LibreriasReto.BLL.Servicios
             List<Libro> librosConFiltro;
             try
             {
-                librosConFiltro = nombre == null || nombre.Trim() == "" ? await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == true).Include(i => i.IdGeneroNavigation).ToListAsync() : await _dbcontext.Set<Libro>().Where(libro => libro.EsActivo == true && libro.Nombre.Contains(nombre)).Include(i => i.IdGeneroNavigation).ToListAsync();
+                librosConFiltro = nombre == null || nombre.Trim() == "" ? await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == true).Include(i => i.IdGeneroNavigation).OrderBy(x => x.Nombre).ToListAsync() : await _dbcontext.Set<Libro>().Where(libro => libro.EsActivo == true && libro.Nombre.Contains(nombre)).Include(i => i.IdGeneroNavigation).ToListAsync();
                 listaClisentes = _mapper.Map<List<LibroDTO>>(librosConFiltro);
             }
             catch
@@ -154,7 +154,7 @@ namespace LibreriasReto.BLL.Servicios
             List<LibroDTO> listaClisentes;
             try
             {
-                var clientes = await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == false).Include(i => i.IdGeneroNavigation).ToListAsync();
+                var clientes = await _dbcontext.Set<Libro>().Where(activo => activo.EsActivo == false).Include(i => i.IdGeneroNavigation).OrderBy(x => x.Nombre).ToListAsync();
                 listaClisentes = _mapper.Map<List<LibroDTO>>(clientes);
             }
             catch

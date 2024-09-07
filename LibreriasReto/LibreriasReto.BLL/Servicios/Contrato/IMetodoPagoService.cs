@@ -12,7 +12,6 @@ namespace LibreriasReto.BLL.Servicios.Contrato
 {
     public interface IMetodoPagoService
     {
-        //Task<List<MetodoPagoDTO>> Listar(Expression<Func<MetodoPago, bool>> filtro = null);
         Task<List<MetodoPagoDTO>> listar(Expression<Func<MetodoPago, bool>> filtro = null);
     }
 }

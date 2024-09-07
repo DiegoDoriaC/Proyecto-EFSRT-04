@@ -1,9 +1,10 @@
 ﻿using LibreriasReto.BLL.Servicios.Contrato;
 using LibreriasReto.DTO;
+using LibreriasReto.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authorization;
+using System.Globalization;
 
 namespace LibreriasReto.Controllers
 {
@@ -21,9 +22,19 @@ namespace LibreriasReto.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(int pagina = 1)
         {
             List<RecepcionDTO> listaRecepciones = await _servicio.Listar();
+            int cantidadRegistrosPorPagina = 10;
+            var librosParaLaPaginacion = listaRecepciones.Skip((pagina - 1) * cantidadRegistrosPorPagina).Take(cantidadRegistrosPorPagina).ToList();
+            var totalDeRegistros = listaRecepciones.Count();
+            //CODIGO PARA LA PAGINACION            
+            var modelo = new PaginacionModelo<RecepcionDTO>();
+            modelo.listaGenerica = librosParaLaPaginacion;
+            modelo.PaginaActual = pagina;
+            modelo.TotalDeRegistros = totalDeRegistros;
+            modelo.RegistrosPorPagina = cantidadRegistrosPorPagina;
+
             ViewBag.MENSAJE = null;
             ViewBag.ReporteSemanal = 0;
             ViewBag.ReporteMensual = 0;
@@ -31,13 +42,17 @@ namespace LibreriasReto.Controllers
             if (listaRecepciones.Count == 0)
             {
                 ViewBag.MENSAJE = "Ningun registro encontrado...";
-                return View(listaRecepciones);
+                return View(modelo);
             }
+
             var fechaSemana = DateTime.Now.AddDays(-7);
-            ViewBag.ReporteSemanal = listaRecepciones.Where(l => Convert.ToDateTime(l.FechaIngreso) > DateTime.Now.AddDays(-7)).Count();
-            ViewBag.ReporteMensual = listaRecepciones.Where(l => Convert.ToDateTime(l.FechaIngreso) > DateTime.Now.AddMonths(-1)).Count();
+            var fechaMes = DateTime.Now.AddMonths(-1);
+
+            ViewBag.ReporteSemanal = listaRecepciones.Where(r => Convert.ToDateTime(r.FechaIngreso, new CultureInfo("es-PE")) > fechaSemana).Count();
+            ViewBag.ReporteMensual = listaRecepciones.Where(r => Convert.ToDateTime(r.FechaIngreso, new CultureInfo("es-PE")) > fechaMes).Count();
+
             ViewBag.ReporteTotal = listaRecepciones.ToList().Count();
-            return View(listaRecepciones);
+            return View(modelo);
         }
 
         [HttpGet]
@@ -78,7 +93,6 @@ namespace LibreriasReto.Controllers
             return View(new RecepcionDTO());
         }
 
-        //MUCHO CUIDADO
         [HttpPost]
         public async Task<IActionResult> Create(RecepcionDTO cliente)
         {

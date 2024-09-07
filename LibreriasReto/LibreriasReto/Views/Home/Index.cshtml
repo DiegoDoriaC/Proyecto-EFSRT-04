@@ -9,7 +9,7 @@
 <div class="text-center" style="margin-top:140px">
     <h3 class="display-5">Bienvenido a:</h3>
     <h1 class="display-1"><strong>Librerias Reto</strong></h1>
-    <p style="font-size:30px">Usuario: @(User.Identity.Name)</p>
+    <p style="font-size:30px">@(User.Claims.FirstOrDefault(c => c.Type == "rolEmpleado").Value): @(User.Identity.Name)</p>
 
 </div>
 

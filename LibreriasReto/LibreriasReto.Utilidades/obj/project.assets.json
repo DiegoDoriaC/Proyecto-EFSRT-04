@@ -2814,24 +2814,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Diego D\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\diego\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Utilidades\\LibreriasReto.Utilidades.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Utilidades\\LibreriasReto.Utilidades.csproj",
       "projectName": "LibreriasReto.Utilidades",
-      "projectPath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Utilidades\\LibreriasReto.Utilidades.csproj",
-      "packagesPath": "C:\\Users\\Diego D\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Utilidades\\obj\\",
+      "projectPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Utilidades\\LibreriasReto.Utilidades.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Utilidades\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Diego D\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2846,11 +2841,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj": {
-              "projectPath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj"
+            "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj": {
+              "projectPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.DTO\\LibreriasReto.DTO.csproj"
             },
-            "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\LibreriasReto.Models.csproj": {
-              "projectPath": "C:\\Users\\Diego D\\Desktop\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\LibreriasReto.Models.csproj"
+            "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\LibreriasReto.Models.csproj": {
+              "projectPath": "C:\\Users\\diego\\OneDrive\\Escritorio\\Cursos\\Cibertec\\Ciclo 04\\Proyectos\\Experiencias Formativas\\LibreriasReto\\LibreriasReto.Models\\LibreriasReto.Models.csproj"
             }
           }
         }
